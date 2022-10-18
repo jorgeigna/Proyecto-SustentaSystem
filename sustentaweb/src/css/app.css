@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.button2{
+    bottom: fixed;
+    color:aqua;
+    background-color:rgba(220, 0, 0, 1);
+}
+.button2:hover {
+    color:blue;
+    background-color: green;
+}
+.button2:active{
+    color:blueviolet;
+    background-color: aliceblue;
+}
