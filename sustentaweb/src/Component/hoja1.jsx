@@ -2,8 +2,9 @@ import React, {Fragment} from "react";
 export  function hoja1() {
   return (
     <Fragment>
+    <h2>FORMULARIO SUSTENTASYSTEM</h2> 
     <div>CORREO ELECTRONICO</div>
-    <input type = "text" placeholder = "ingrese el correo electronico empresarial"/>
+    <input type = "text" className="textoformulario" placeholder = "ingrese el correo electronico empresarial"/>
     <div>NOMBRE Y APELLIDO</div>
     <input type = "text" placeholder = "ingrese nombre y apellido del representante"/>
     <div>NOMBRE DE LA ORGANIZACIÓN</div>
@@ -26,6 +27,8 @@ export  function hoja1() {
     <div>SITIO WEB DE LA ORGANIZACIÓN </div>
     <input type = "text" placeholder = "ingrese el sitio web de la empresa"/>
     <div>RRSS DE LA ORGANIZACIÓN </div>
+    <button class="button2" type = "button" >
+    testing</button>
      
     </Fragment> 
   )
