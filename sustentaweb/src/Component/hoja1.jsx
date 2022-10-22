@@ -1,8 +1,9 @@
 import React, {Fragment} from "react";
+
 export  function hoja1() {
   return (
     <Fragment>
-    <h2>FORMULARIO SUSTENTASYSTEM</h2> 
+    <h2>FORMULARIO SUSTENTASYSTEM</h2>
     <div>CORREO ELECTRONICO</div>
     <input type = "text" className="textoformulario" placeholder = "ingrese el correo electronico empresarial"/>
     <div>NOMBRE Y APELLIDO</div>
