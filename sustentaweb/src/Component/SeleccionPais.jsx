@@ -6,7 +6,10 @@ export default function SeleccionPais(props){
     return(
     
             <Form>
+                
+                <br></br>
                 <Form.Label>{props.TituloInputNormal}</Form.Label>
+                
                 <Form.Select className="mb-6" controlID="InputSeleccion3">
                         <option>{props.TituloInputSeleccion}</option>
                         <option value="1">{props.opcion1}</option>
