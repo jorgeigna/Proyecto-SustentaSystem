@@ -3,6 +3,9 @@ import Contenedor from "../Component/Contenedor";
 import InputNormal from "../Component/InputNormal";
 import InputGrupo from  "../Component/InputGrupo"
 import SeleccionArea from '../Component/SeleccionArea';
+import InputTelefono from "../Component/InputTelefono";
+import SeleccionAño from "../Component/SeleccionAño";
+import SeleccionPais from "../Component/SeleccionPais";
 
 export  function hoja1() {
   return (
@@ -20,38 +23,43 @@ export  function hoja1() {
           <main>
             <section id="Formulario">
               <InputNormal className = "InputEmail" TituloInputNormal = "Email" placeholder = "email@example.com" >
-              </InputNormal>
+              </InputNormal>              
+
               <InputGrupo className="InputNombeApellido" TituloInputNormal="Nombre Y Apellido" placeholder1="Nombre" placeholder2="Apellido">
               </InputGrupo>
+
               <InputNormal className="InputNombreOrganizacion" TituloInputNormal="Nombre de la Organización" placeholder="Nombre Organización">
               </InputNormal>
+
               <SeleccionArea className="InputSeleccion" TituloInputNormal="Área de la Organización" TituloInputSeleccion="Seleccione Área de la Organización" opcion1="Dueño Empresa" opcion2="Finanzas" opcion3="Mercadeo" opcion4="Administración" opcion5="Calidad" opcion6="Área Legal" opcion7="Área de Proyecto"
               opcion8="Comercial" opcion9="Recursos Humanos" opcion10="Sustentabilidad" opcion11="Otro"></SeleccionArea>
-  
-              <div>ÁREA EN LA ORGANIZACIÓN</div>
-              <select name="select" >
-                  <option value="1">seleccione el ara de organizacion de su empresa</option>
-              </select>
-              <div>TELÉFONO DE CONTACTO</div>
-              <input type = "text" placeholder = "ingrese el telefono de contacto de la empresa"/>
-              <div>AÑO DE FORMALIZACIÓN DEL NEGOCIO</div>
-              <input type = "text" placeholder = "ingrese el año de formalizacion de la empresa"/>
-              <div> NÚMERO DE IDENTIFICADOR FISCAL DE LA ORGANIZACIÓN</div>
-              <input type = "text" placeholder = "ingrese el RUT de la empresa"/>
-              <div>PAIS</div>
-              <div>REGIÓN DEL PAÍS</div>
-              <div>COMUNA</div>
-              <div> MONTO DE FACTURACIÓN DEL ÚLTIMO AÑO FISCAL</div>
-              <input type = "text" placeholder = "ingrese el monto de factuzacion del ultimo año"/>
-              <div>SITIO WEB DE LA ORGANIZACIÓN </div>
-              <input type = "text" placeholder = "ingrese el sitio web de la empresa"/>
-              <div>RRSS DE LA ORGANIZACIÓN </div>
-              <button class="button2" type = "button" >
-              testing</button>
+
+              <InputTelefono className="InputTelefono" TituloInputNormal="Teléfono de Contacto" placeholder="Number" 
+              TituloInputSeleccion="+ (Codigo Pais)" opcion1="+56" opcion2="Otro"></InputTelefono>
+
+              <SeleccionAño className="SeleccionAño" TituloInputNormal="Año de Formalización del Negocio" TituloInputSeleccion="Seleccione Año de Formalización" opcion1="Antes del 2017" opcion2="2018" 
+              opcion3="2019" opcion4="2020" opcion5="2021" opcion6="2022"></SeleccionAño>
+
+              <InputNormal className="InputIndentificadorFiscal" TituloInputNormal="Número de Identidicador Fiscal de la Organización" placeholder="Identificador Fiscal"></InputNormal>
+
+              <SeleccionPais className="SeleccionPais" TituloInputNormal="Pais" TituloInputSeleccion="Seleccionar Pais" opcion1="Chile" opcion2="Peru" opcion3="Colombia" opcion4="Ecuador" opcion5="Bolivia" opcion6="Otro"></SeleccionPais>
+
+              <InputNormal className="InputFacturacion" TituloInputNormal="Monto de Facturación del Último Año Fiscal" placeholder="Ingrese Monto de Facturación"></InputNormal>
+
+              <InputNormal className="InputSitioWeb" TituloInputNormal="Sitio Web de la Organiación" placeholder="www.Example.com" ></InputNormal>
+
+              <InputNormal className="InputRRSS" TituloInputNormal="Redes Sociales de la Organización" placeholder="RRSS"></InputNormal>
+            </section>
+            <section>
+            
 
             </section>
-
           </main>
+
+          <footer>
+          
+
+          </footer>
 
 
       </body>
