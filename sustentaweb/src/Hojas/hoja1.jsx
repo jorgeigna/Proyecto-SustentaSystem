@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React, {Fragment,Component} from "react";
 import Contenedor from "../Component/Contenedor";
 import InputNormal from "../Component/InputNormal";
 import InputGrupo from  "../Component/InputGrupo"
@@ -10,16 +10,14 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
 
-export  function hoja1() {
-  return (
+class Hoja1 extends Component {
+  nextF(){
+      window.alert("Bienvenido a nuestro sitio web");
+
+}
+  render(){ return (
     <Fragment>
-      <head>
-          <title>Formulario SustentaSistem</title>
-      </head>
       <body>
-            <header>
-              <Contenedor></Contenedor>
-            </header>
             <main>
               <div>
                 <section id="Formulario">
@@ -67,7 +65,9 @@ export  function hoja1() {
                       <InputNormal className="InputSitioWeb" TituloInputNormal="Sitio Web de la Organiación" placeholder="www.Example.com" ></InputNormal>
 
                       <InputNormal className="InputRRSS" TituloInputNormal="Redes Sociales de la Organización" placeholder="RRSS"></InputNormal>
+                      <button onClick={this.nextF}>test button</button>
                     </Form>
+
                 </section>
               </div>
             </main>
@@ -81,3 +81,5 @@ export  function hoja1() {
     </Fragment> 
   )
 }
+}
+export default Hoja1
