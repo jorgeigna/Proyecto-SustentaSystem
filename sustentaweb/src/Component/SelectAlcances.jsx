@@ -14,9 +14,6 @@ export default function SelectAlcances(props) {
     <option value="4">{props.opcion4}</option>
     <option value="5">{props.opcion5}</option>
     <option value="6">{props.opcion6}</option>
-    <option value="7">{props.opcion7}</option>
-    <option value="8">{props.opcion1}</option>
-    <option value="9">{props.opcion2}</option>
     </Form.Select>
 </Form>  
     )

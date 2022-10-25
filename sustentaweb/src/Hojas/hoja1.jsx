@@ -72,7 +72,6 @@ class Hoja1 extends Component {
               </div>
             </main>
             <footer>
-              <h1>Informacion</h1>
             </footer>
 
 

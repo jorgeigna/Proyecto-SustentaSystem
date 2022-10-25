@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 
-export default function selectObjetivo(props) {
+export default function SelectMotivacion(props) {
   return (
 <Form>
     <Form.Label>{props.TituloInputNormal}</Form.Label>  
@@ -15,8 +15,8 @@ export default function selectObjetivo(props) {
     <option value="5">{props.opcion5}</option>
     <option value="6">{props.opcion6}</option>
     <option value="7">{props.opcion7}</option>
-    <option value="8">{props.opcion1}</option>
-    <option value="9">{props.opcion2}</option>
+    <option value="8">{props.opcion8}</option>
+    <option value="9">{props.opcion9}</option>
     </Form.Select>
 </Form> 
      )

@@ -14,7 +14,6 @@ export default function SelectActividad(props) {
     <option value="4">{props.opcion4}</option>
     <option value="5">{props.opcion5}</option>
     <option value="6">{props.opcion6}</option>
-    <option value="7">{props.opcion7}</option>
     </Form.Select>
     </Form>  
   )
