@@ -10,7 +10,7 @@ export default class App extends Component {
     return (
       <Fragment>
       <Encabezado />
-      <Hoja1 />
+      <Hoja2 />
       
       <Test />
 
