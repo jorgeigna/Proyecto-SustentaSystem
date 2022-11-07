@@ -12,7 +12,7 @@ import Form from "react-bootstrap/Form";
 
 class Hoja1 extends Component {
   nextF(){
-      window.alert("Bienvenido a nuestro sitio web");
+      window.alert("Procediendo a la siguiente pagina");
 
 }
   render(){ return (
@@ -65,7 +65,7 @@ class Hoja1 extends Component {
                       <InputNormal className="InputSitioWeb" TituloInputNormal="Sitio Web de la Organiación" placeholder="www.Example.com" ></InputNormal>
 
                       <InputNormal className="InputRRSS" TituloInputNormal="Redes Sociales de la Organización" placeholder="RRSS"></InputNormal>
-                      <button onClick={this.nextF}>test button</button>
+                      <button Class = "Button"onClick={this.nextF}>siguiente</button>
                     </Form>
 
                 </section>

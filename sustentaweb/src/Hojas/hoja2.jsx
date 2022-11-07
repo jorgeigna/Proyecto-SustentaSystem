@@ -137,7 +137,7 @@ class Hoja2 extends Component {
             </SelectAlcances>
           </Row>
 
-          <button>Siguiente</button>
+          <button class ="Button">Siguiente</button>
           </Form>
         </section>
       </div>
