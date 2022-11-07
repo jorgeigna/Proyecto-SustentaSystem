@@ -6,7 +6,7 @@ import css from "../css/app.css"
     return (
       
     <header>
-        <a>Formulario SustentaSistem</a>
+        <h1 class = "enclet">Formulario SustentaSystem</h1>
     </header>         
      )
         
