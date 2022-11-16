@@ -1,29 +1,15 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-header {
-    width: 100%;
-    height: 50px;
-    background: rgba(0, 238, 218, 0);
-    color:rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    
-}
+
 body {
-    
+    background-image: url("https://images.pexels.com/photos/1420440/pexels-photo-1420440.jpeg");
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-size: cover;
     background-attachment: fixed;
-    background-color: #1d8d8d88;
+ 
 }
 #Formulario {
     position: absolute;
@@ -73,4 +59,13 @@ body {
     border-radius: 10%;
     border-color: rgb(226, 21, 21);
     background-color: rgb(226, 0, 0);
+}
+
+#logcss{
+    background-color: black;
+}
+footer{
+    color: white;
+    position: fixed;
+    bottom: 0;
 }
