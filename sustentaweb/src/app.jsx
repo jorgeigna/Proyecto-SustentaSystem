@@ -27,7 +27,7 @@ export default class App extends Component {
       <Route path='/about'element={<About/>}/>
       <Route path='/faq'element={<Faq/>}/>
         </Routes>
-        <footer>
+        <footer className='me-auto' bg="dark" variant="dark">
           <h1>pepito</h1>
         </footer>
       </Fragment>
