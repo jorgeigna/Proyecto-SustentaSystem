@@ -8,6 +8,13 @@ class Regencu extends Component {
       <Fragment>
         <section id="Emcuesta">
           <Form>
+            <h1>Encuesta de Conocimiento y Nivelación</h1>
+            <h5>
+              para conocer que producto necesita solicitamos completar esta
+              encuesta, solicitamos completar con sinceridad para determinar
+              correctamente que nivel de conocimiento posee sobre la
+              sustentabilidad
+            </h5>
             <p>pregunta 1</p>
 
             <input

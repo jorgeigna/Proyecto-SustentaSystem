@@ -10,7 +10,6 @@ class Homep extends Component {
   render() {
     return (
       <Fragment>
-        
         <div className="carrouselcont">
           <Carousel variant="dark">
             <Carousel.Item>

@@ -40,8 +40,6 @@ body {
   background-color: lightgray;
 }
 
-
-
 footer {
   color: white;
   position: fixed;
@@ -77,9 +75,8 @@ footer {
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-.imputregenc{
-  float: left;  
-  
+.imputregenc {
+  float: left;
 }
 #Emcuesta {
   position: absolute;
@@ -89,7 +86,7 @@ footer {
   color: rgb(0, 0, 0);
   background: rgba(211, 211, 211, 0.842);
   padding: 20px;
-  margin-top: 15%;
+  margin-top: 20%;
   border-radius: 2%;
   width: 800px;
 }
