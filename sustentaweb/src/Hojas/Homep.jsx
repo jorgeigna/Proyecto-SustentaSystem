@@ -10,48 +10,7 @@ class Homep extends Component {
   render() {
     return (
       <Fragment>
-        <header>
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <Navbar.Brand>
-                <Link className="nav-link" to="/">
-                  SustentaWeb
-                </Link>
-              </Navbar.Brand>
-              <Nav className="me-auto">
-                <Nav.Link>
-                  <Link className="nav-link" to="/">
-                    Home
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link className="nav-link" to="/encuest">
-                    Encuestas
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link className="nav-link" to="/about">
-                    Sobre Nosotros
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link className="nav-link" to="/faq">
-                    FAQ
-                  </Link>
-                </Nav.Link>
-              </Nav>
-
-              <Nav>
-                <Nav.Link eventKey={2}>
-                  
-                  <Link to="/login" className="nav-link">
-                    Login
-                  </Link>
-                </Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar>
-        </header>
+        
         <div className="carrouselcont">
           <Carousel variant="dark">
             <Carousel.Item>
