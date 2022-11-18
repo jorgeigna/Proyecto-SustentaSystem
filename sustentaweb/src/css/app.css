@@ -1,0 +1,136 @@
+
+html{
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-image: url("../images/background.jpg");
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+}
+#Formulario {
+  position: relative;
+  left: 50%;
+  top: 55%;
+  transform: translateX(-50%) translateY(-50%);
+  color: rgb(0, 0, 0);
+  background: rgba(211, 211, 211, 0.842);
+  padding: 20px;
+  margin-top: 25%;
+  margin-bottom: -20%;
+  border-radius: 3%;
+  width: 700px;
+}
+@media (min-width: 768px) {
+  .Formulario {
+    margin: auto;
+    width: 500px;
+    margin-top: 20%;
+    border-radius: 2%;
+  }
+}
+.Button {
+  margin-top: 5px;
+  right: 0%;
+  border-radius: 10%;
+  border-color: lightgray;
+  background-color: lightgray;
+}
+
+
+.carrouselcont {
+  max-width: 95%;
+  padding-left: 5%;
+}
+.imgcontainer {
+  background-color: rgba(255, 255, 255, 0.699);
+  width: 50%;
+  padding-left: 1%;
+  margin-top: 2%;
+  margin: 5%;
+  height: 270px;
+  border-radius: 2%;
+}
+.compimg {
+  padding-top: auto;
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 30px;
+}
+.tittleimg {
+  font-family: sans-serif;
+  font-size: 40px;
+}
+.placeholderdiv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.imputregenc {
+  float: left;
+}
+#Emcuesta {
+  
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: rgb(0, 0, 0);
+  background: rgba(211, 211, 211, 0.842);
+  padding: 20px;
+  margin-top: 45%;
+  margin-bottom: -40%;
+  border-radius: 2%;
+  width: 800px;
+}
+#resuform {
+  
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: rgb(0, 0, 0);
+  background: rgba(211, 211, 211, 0.842);
+  padding: 20px;
+  margin-top: 2%;
+  margin-bottom: -2%;
+  border-radius: 2%;
+  width: 800px;
+}
+.abfrag{
+  background-color: rgba(255, 255, 255, 0.781);
+}
+.abfrag2{
+  background-color: rgba(226, 225, 225, 0.74);
+}
+.abfrag3{
+  background-color: rgba(134, 126, 126, 0.664);
+}
+
+.achead{
+  background-color: rgba(172, 157, 157, 0.349);
+}
+.accordion-button:not(.collapsed) {
+  background-color: bisque;
+  color-scheme: black;
+  color:red
+}
+.accordion-button:not(.notcollapsed) {
+background-color: rgba(195, 195, 201, 0.863);  
+
+}
+#acc{
+padding: 200px;
+}
