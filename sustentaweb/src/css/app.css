@@ -1,72 +1,95 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 body {
-    background-image: url("https://images.pexels.com/photos/1420440/pexels-photo-1420440.jpeg");
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background-size: cover;
-    background-attachment: fixed;
- 
+  background-image: url("../images/background.jpg");
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
 }
 #Formulario {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: rgb(4, 41, 24);
-    background: rgba(210, 228, 110, 0.781);
-    padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: rgb(0, 0, 0);
+  background: rgba(211, 211, 211, 0.842);
+  padding: 20px;
+  margin: auto;
+  border-radius: 3%;
+  width: 700px;
+}
+@media (min-width: 768px) {
+  .Formulario {
     margin: auto;
-    border-radius: 3%;
-    width: 700px;
+    width: 500px;
+    margin-top: 140px;
+    border-radius: 2%;
+  }
 }
-@media(min-width:768px) {
-    .Formulario{
-        margin: auto;
-        width: 500px;
-        margin-top: 140px;
-        border-radius: 2%;
-    }
-}
-.Button{
-    margin-top: 5px;
-    margin-left: 590px;
-    border-radius: 10%;
-    border-color: lightgray;
-    background-color: lightgray;
-}
-.enclet{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:azure;
-    font-size: 35px;
-    margin-left: 10px;
-    margin-top: 2px;
-}
-.lettest{
-    padding-bottom: 50%;
-    padding-top: 50%;
-    margin-top: 50%;
-    margin-bottom: 50%;
-    margin-left: 50%;
-    color :red;
-}
-.Buttot{
-    margin-top: 50000px;
-    margin-left: 590px;
-    border-radius: 10%;
-    border-color: rgb(226, 21, 21);
-    background-color: rgb(226, 0, 0);
+.Button {
+  margin-top: 5px;
+  right: 0%;
+  border-radius: 10%;
+  border-color: lightgray;
+  background-color: lightgray;
 }
 
-#logcss{
-    background-color: black;
+
+
+footer {
+  color: white;
+  position: fixed;
+  bottom: 0;
 }
-footer{
-    color: white;
-    position: fixed;
-    bottom: 0;
-    
+.carrouselcont {
+  max-width: 95%;
+  padding-left: 5%;
+}
+.imgcontainer {
+  background-color: rgba(255, 255, 255, 0.699);
+  width: 50%;
+  padding-left: 1%;
+  margin-top: 2%;
+  margin: 5%;
+  height: 270px;
+  border-radius: 2%;
+}
+.compimg {
+  padding-top: auto;
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 30px;
+}
+.tittleimg {
+  font-family: sans-serif;
+  font-size: 40px;
+}
+.placeholderdiv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.imputregenc{
+  float: left;  
+  
+}
+#Emcuesta {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: rgb(0, 0, 0);
+  background: rgba(211, 211, 211, 0.842);
+  padding: 20px;
+  margin-top: 15%;
+  border-radius: 2%;
+  width: 800px;
 }

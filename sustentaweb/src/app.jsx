@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import FormReg1 from './Hojas/formReg1'
-import Test from './Hojas/test'
 import Formreg2 from './Hojas/formreg2'
 import Regencu from './Hojas/regencu'
 import Logp from './Hojas/Logp'
@@ -30,6 +29,7 @@ export default class App extends Component {
         <footer className='me-auto' bg="dark" variant="dark">
           <h1>pepito</h1>
         </footer>
+        
       </Fragment>
     )
   }
