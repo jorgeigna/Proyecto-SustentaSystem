@@ -120,17 +120,39 @@ body {
 }
 
 .achead{
-  background-color: rgba(172, 157, 157, 0.349);
+  background-color: rgba(220, 224, 222, 0.63);  
 }
 .accordion-button:not(.collapsed) {
-  background-color: bisque;
-  color-scheme: black;
-  color:red
+  color:	rgb(0, 0, 0);
+  font-weight:bold;
 }
 .accordion-button:not(.notcollapsed) {
-background-color: rgba(195, 195, 201, 0.863);  
+background-color: rgba(220, 224, 222, 0.63);  
 
+font-size: large;
+}
+.accordion-body{
+  font-size: large;
+  font-weight: bold;
 }
 #acc{
-padding: 200px;
+width: 80%;
+left: 10%;
+padding-top: 150px;
+position:relative;
+padding-bottom: 20px;
+top: 20px;
+}
+.cardtittle{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  
+}
+.cardbottom{
+  position:relative;
+  left: 10%;
+  margin-bottom: 10px;
+  width: 80%;
+  padding-top: 20px;
 }

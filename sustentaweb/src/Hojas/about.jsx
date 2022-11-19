@@ -1,8 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import im1 from "../images/im1.png";
 import im2 from "../images/im2.png";
@@ -131,22 +128,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#"className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -168,22 +165,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#"className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -205,22 +202,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -242,22 +239,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -280,22 +277,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -316,23 +313,23 @@ export default class About extends Component {
                     CEO - Founder
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                    <li  className="list-inline-item">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -354,22 +351,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -391,22 +388,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -429,22 +426,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -466,22 +463,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -503,22 +500,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -540,22 +537,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#"className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -578,22 +575,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>
@@ -615,22 +612,22 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#" className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "linkedin"]} />
                       </a>
                     </li>

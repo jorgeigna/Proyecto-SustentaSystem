@@ -1,8 +1,4 @@
 import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import Carousel from "react-bootstrap/Carousel";
 import firstimage from "../images/firstimage.jpg";
 import companyimage from "../images/companyplaceholder.jpg";
@@ -59,8 +55,8 @@ class Homep extends Component {
           <h1 className="tittleimg">experiencia de nuestros usuarios</h1>
           <img src={companyimage} className="compimg" alt="companyimage" />
           <div>
-            <h3 style={{}}>lorem ipsum</h3>
-            <h7>lorem imsum lorem</h7>
+            <h3>lorem ipsum</h3>
+            <h6>lorem imsum lorem</h6>
           </div>
         </form>
       </Fragment>

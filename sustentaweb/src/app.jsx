@@ -128,6 +128,8 @@ export default class App extends Component {
                 <a
                   className="btn btn-outline-light btn-floating m-1"
                   href="https://www.facebook.com/kairosgestionintegral/"
+                  target={"_blank"}
+                  rel="noreferrer"
                   role="button"
                 >
                   {" "}
@@ -136,23 +138,29 @@ export default class App extends Component {
 
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="#!"
+                  href="https://api.whatsapp.com/send?phone=+56937448131&text=Requiero%20m%C3%A1s%20Informaci%C3%B3n%20de%20KairosCoach"
+                  target={"_blank"}
+                  rel="noreferrer"
                   role="button"
                 >
-                  <FontAwesomeIcon icon={["fab", "twitter"]} />
+                  <FontAwesomeIcon icon={["fab", "whatsapp"]} />
                 </a>
 
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="#!"
+                  href="mailto:%20contacto@kairosgestionintegral.com"
+                  target={"_blank"}
+                  rel="noreferrer"
                   role="button"
                 >
-                  <FontAwesomeIcon icon={["fab", "google"]} />
+                  <FontAwesomeIcon icon={["fas", "envelope"]} />
                 </a>
 
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="#!"
+                  href="https://www.instagram.com/kairosgestionintegral/"
+                  target={"_blank"}
+                  rel="noreferrer"
                   role="button"
                 >
                   <FontAwesomeIcon icon={["fab", "instagram"]} />
@@ -160,10 +168,21 @@ export default class App extends Component {
 
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="#!"
+                  href="https://www.linkedin.com/company/kairosgestionintegral/"
+                  target={"_blank"}
+                  rel="noreferrer"
                   role="button"
                 >
                   <FontAwesomeIcon icon={["fab", "linkedin"]} />
+                </a>
+                <a
+                  className="btn btn-outline-light btn-floating m-1"
+                  href="https://www.youtube.com/channel/UCHII_5amYANh0oyETZLgv7g"
+                  target={"_blank"}
+                  rel="noreferrer"
+                  role="button"
+                >
+                  <FontAwesomeIcon icon={["fab", "youtube"]} />
                 </a>
               </section>
             </div>
@@ -173,7 +192,7 @@ export default class App extends Component {
               style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
             >
               Kairos coash © 2021:
-              <a className="text-white" href="http://kairosgestionintegral.com/">
+              <a className="text-white" href="http://kairosgestionintegral.com/" rel="noreferrer" target={"_blank"}>
                 kairosgestionintegral.com
               </a>
             </div>
