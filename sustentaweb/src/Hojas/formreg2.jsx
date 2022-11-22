@@ -73,7 +73,7 @@ class Formreg2 extends Component {
     }
   }
   compb() {
-    dts = JSON.parse(localStorage.getItem("p1"))
+    dts = JSON.parse(localStorage.getItem("data"))
     var dts2 = [auxcompacc,auxnumwork,auxpfem,auxitype,auxindextra,auxaccomr,auxcertf,auxcerfextra,auxmotiv,auxalcan]
     var dts3 = dts.concat(dts2)
     localStorage.setItem("data", JSON.stringify(dts3));

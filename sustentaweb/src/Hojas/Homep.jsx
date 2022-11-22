@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import firstimage from "../images/firstimage.jpg";
+import firstimage from "../images/slide1.png";
+import secondimage from "../images/slide2.jpg"
 import companyimage from "../images/companyplaceholder.jpg";
+import thirdunage from "../images/slide3.png"
 class Homep extends Component {
   render() {
     return (
@@ -16,36 +18,36 @@ class Homep extends Component {
                 style={{ height: 400 }}
               />
               <Carousel.Caption>
-                <h5>First slide label</h5>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                <h5 style={{fontWeight:"1000"}}>Cumple tus metas</h5>
+                <p style={{fontWeight:"bold"}}>
+                  Nuestra experiencia te ayudara a cumplirlas
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="http://drive.google.com/uc?export=view&id=1PLQLsDnLTAG2GtUaRVcDyyZzhgYvi7DV"
+                src={secondimage}
                 alt="Second slide"
                 style={{ height: 400 }}
               />
               <Carousel.Caption>
-                <h5>Second slide label</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h5 style={{fontWeight:"1000"}}>Nuestros productos</h5>
+                <p style={{fontWeight:"bolder"}}>estan pensados para tus necesidades.</p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="http://drive.google.com/uc?export=view&id=1PLQLsDnLTAG2GtUaRVcDyyZzhgYvi7DV"
+                src= {thirdunage}
                 alt="Third slide"
                 style={{ height: 400 }}
               />
               <Carousel.Caption>
-                <h5>Third slide label</h5>
-                <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur.
+                <h5 style={{fontWeight:"1000"}}>Kairos</h5>
+                <p style={{fontWeight:"bolder"}}>
+                  es una empresa especializada en sustentabilidad 
+                  lista para ayudar
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -55,8 +57,8 @@ class Homep extends Component {
           <h1 className="tittleimg">experiencia de nuestros usuarios</h1>
           <img src={companyimage} className="compimg" alt="companyimage" />
           <div>
-            <h3>lorem ipsum</h3>
-            <h6>lorem imsum lorem</h6>
+            <h3>Empresa de ejemplo</h3>
+            <h6>"Kairos es una de las mejores empresas de consultoria que hemos contratado, partimos de no tener nada a tener una politica ambiental para cumplir con las metas de 2023"</h6>
           </div>
         </form>
       </Fragment>
