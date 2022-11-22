@@ -6,13 +6,13 @@ export default function SelectNumFem(props) {
   return (
 <Form>
     <Form.Label>{props.TituloInputNormal}</Form.Label>
-    <Form.Select className="mb-3" controlID="InputSeleccion8">   
+    <Form.Select className="mb-3" controlID="InputSeleccion8" onChange={props.onChange}>   
     <option>{props.TituloInputSeleccion}</option>
-    <option value="1">{props.opcion1}</option>
-    <option value="2">{props.opcion2}</option>
-    <option value="3">{props.opcion3}</option>
-    <option value="4">{props.opcion4}</option>
-    <option value="5">{props.opcion5}</option>
+    <option value={props.opcion1}>{props.opcion1}</option>
+    <option value={props.opcion2}>{props.opcion2}</option>
+    <option value={props.opcion3}>{props.opcion3}</option>
+    <option value={props.opcion4}>{props.opcion4}</option>
+    <option value={props.opcion5}>{props.opcion5}</option>
     </Form.Select>
 </Form>  
      )

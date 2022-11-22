@@ -16,7 +16,9 @@ class AuthService {
         return response.data;
       });
   }
-
+register(){
+  
+}
   logout() {
     localStorage.removeItem("user");
   }

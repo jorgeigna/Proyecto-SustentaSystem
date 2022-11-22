@@ -125,7 +125,7 @@ class Logp extends Component {
                                        <div>
                 <p style={{ float: "left" }}>si no tienes cuenta &nbsp;</p>
                 <p>
-                  <Link to="/registro/pag1"> registrate</Link>
+                  <a href="/registro/pag1"> registrate</a>
                 </p>
               </div>
                <button

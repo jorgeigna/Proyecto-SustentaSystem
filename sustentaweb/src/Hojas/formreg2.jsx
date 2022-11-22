@@ -1,6 +1,5 @@
 import React from "react";
 import { Fragment, Component } from "react";
-import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
 import SeleccionCompAccion from "../Component/SeleccionCompAccion";
@@ -14,6 +13,71 @@ import SelectTipoInduc from "../Component/SelectTipoInduc";
 import { Link } from "react-router-dom";
 
 class Formreg2 extends Component {
+  constructor(props) {
+    super(props);
+    this.onChangecompacc = this.onChangecompacc.bind(this);
+    this.onChangenumwork = this.onChangenumwork.bind(this);
+    this.onChangepfem = this.onChangepfem.bind(this);
+    this.onChangeitype = this.onChangeitype.bind(this);
+    this.onChangeaccomr = this.onChangeaccomr.bind(this);
+    this.onChangecertf = this.onChangecertf.bind(this);
+    this.onChangemotiv = this.onChangemotiv.bind(this);
+    this.onChangealcan = this.onChangealcan.bind(this);
+    this.imprimir = this.imprimir.bind(this)
+    this.state = {
+      compacc: "",
+      numwork: "",
+      pfem: "",
+      itype: "",
+      accomr: "",
+      certf: "",
+      motiv: "",
+      alcan: "",
+    };
+  }
+  imprimir(){
+    console.log(this.state)
+  }
+  onChangecompacc(e) {
+    this.setState({
+      compacc: e.target.value
+    });
+  }
+  onChangenumwork(e) {
+    this.setState({
+      numwork:e.target.value
+    });
+  }
+  onChangepfem(e) {
+    this.setState({
+      pfem:e.target.value
+    });
+  }
+  onChangeitype(e) {
+    this.setState({
+      itype:e.target.value
+    });
+  }
+  onChangeaccomr(e) {
+    this.setState({
+      accomr:e.target.value
+    });
+  }
+  onChangecertf(e) {
+    this.setState({
+      certf:e.target.value
+    });
+  }
+  onChangemotiv(e) {
+    this.setState({
+      motiv:e.target.value
+    });
+  }
+  onChangealcan(e) {
+    this.setState({
+      alcan:e.target.value
+    });
+  }
   render() {
     return (
       <Fragment>
@@ -28,6 +92,7 @@ class Formreg2 extends Component {
             </h5>
             <Row>
               <SeleccionCompAccion
+              onChange={this.onChangecompacc}
                 className="SeleccionarAcc"
                 TituloInputNormal="Composición Accionaria de la Organización"
                 TituloInputSeleccion="Seleccionar Composición Accionaria"
@@ -43,6 +108,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectNumT
+              onChange ={this.onChangenumwork}
                 className="SeleccionarNumTrab"
                 TituloInputNormal="Cantidad de Trabajadores Actuales en la Organización"
                 TituloInputSeleccion="Seleccionar Cantidad"
@@ -55,6 +121,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectNumFem
+              onChange ={this.onChangepfem}
                 className="SeleccionarNumMujeres"
                 TituloInputNormal="Porcentaje de Mujeres en su Empresa"
                 TituloInputSeleccion="Seleccionar Porcentaje"
@@ -68,6 +135,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectTipoInduc
+              onChange ={this.onChangeitype}
                 className="SeleccionarTipIndustria"
                 TituloInputNormal="Tipo de Industria en la que Opera la Organización"
                 TituloInputSeleccion="Seleccionar Tipo de Industria"
@@ -133,6 +201,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectActividad
+              onChange ={this.onChangecompacc}
                 className="SeleccionarActividadCom"
                 TituloInputNormal="Actividad Comercial del Negocio"
                 TituloInputSeleccion="Seleccionar Actividad"
@@ -147,6 +216,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectCertif
+                onChange ={this.onChangecertf}
                 className="SeleccionarCertificaciones"
                 TituloInputNormal="Seleccione Si Posee Alguna de estas Certificaciones SocioAmbientales"
                 TituloInputSeleccion="Seleccione si posee o no posee "
@@ -172,6 +242,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectMotivacion
+              onChange ={this.onChangemotiv}
                 className="SeleccionarMotivacion"
                 TituloInputNormal="¿Qué Motivación Tienes al Tomar este Apoyo y Orientación sobre Gestión Sustentable?"
                 TituloInputSeleccion="Seleccionar Motivación y Orientaición"
@@ -189,6 +260,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectAlcances
+              onChange ={this.onChangealcan}
                 className="SeleccionarAlcances"
                 TituloInputNormal="Elija los Alcances de la Medición de Impactoque Espera Obtener para el Negocio"
                 TituloInputSeleccion="Seleccione los Alcances"
@@ -200,8 +272,9 @@ class Formreg2 extends Component {
                 opcion6="Objetivos de Desarrollo Sostenible 2030"
               ></SelectAlcances>
             </Row>
+            <input type="button" value ="imprimir datos" onClick={this.imprimir} />
             <Link to="/registro/enc">
-              <button class="Button">Siguiente</button>
+              <button className="Button">Siguiente</button>
             </Link>
           </Form>
         </section>
