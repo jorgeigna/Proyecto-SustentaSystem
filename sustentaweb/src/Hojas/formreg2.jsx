@@ -1,10 +1,12 @@
 import React from "react";
 import { Fragment, Component } from "react";
 import Row from "react-bootstrap/Row";
-import Form from "react-bootstrap/Form";
+import Form from "react-validation/build/form";
 import SeleccionCompAccion from "../Component/SeleccionCompAccion";
 import SelectActividad from "../Component/SelectActividad";
 import SelectAlcances from "../Component/SelectAlcances";
+import Input from "react-validation/build/input";
+
 import SelectCertif from "../Component/SelectCertif";
 import SelectNumFem from "../Component/SelectNumFem";
 import SelectNumT from "../Component/SelectNumT";
@@ -12,9 +14,74 @@ import SelectMotivacion from "../Component/SelectMotivacion";
 import SelectTipoInduc from "../Component/SelectTipoInduc";
 import { Link } from "react-router-dom";
 
+var auxcompacc = "";
+var auxnumwork = "";
+var auxpfem = "";
+var auxitype = "";
+var auxaccomr = "";
+var auxcertf = "";
+var auxmotiv = "";
+var auxalcan = "";
+var auxindextra = "";
+var auxcerfextra = "";
+var dts = {};
 class Formreg2 extends Component {
+  authclik() {
+    if (
+      auxcompacc &&
+      auxnumwork &&
+      auxpfem &&
+      auxitype &&
+      auxaccomr &&
+      auxcertf &&
+      auxmotiv &&
+      auxalcan
+    ) {
+      this.setState({
+        IsAllComplete: false,
+        Nconfrm: { pointerEvents: "" },
+      });
+    } else {
+      this.setState({
+        IsAllComplete: true,
+        Nconfrm: { pointerEvents: "none" },
+      });
+    }
+  }
+  otrcetif(aselec) {
+    if (aselec === "Otra") {
+      this.setState({
+        cerfexstyle: { display: "" },
+      });
+    } else {
+      this.setState({
+        cerfexstyle: { display: "none" },
+        cerfextra: "",
+      });
+    }
+  }
+  otrind(aselec) {
+    if (aselec === "Otro") {
+      this.setState({
+        indexstyle: { display: "" },
+      });
+    } else {
+      this.setState({
+        indexstyle: { display: "none" },
+        indextra: "",
+      });
+    }
+  }
+  compb() {
+    dts = JSON.parse(localStorage.getItem("p1"))
+    var dts2 = [auxcompacc,auxnumwork,auxpfem,auxitype,auxindextra,auxaccomr,auxcertf,auxcerfextra,auxmotiv,auxalcan]
+    var dts3 = dts.concat(dts2)
+    localStorage.setItem("data", JSON.stringify(dts3));
+  }
   constructor(props) {
     super(props);
+    this.otrcetif = this.otrcetif.bind(this);
+    this.otrind = this.otrind.bind(this);
     this.onChangecompacc = this.onChangecompacc.bind(this);
     this.onChangenumwork = this.onChangenumwork.bind(this);
     this.onChangepfem = this.onChangepfem.bind(this);
@@ -23,7 +90,9 @@ class Formreg2 extends Component {
     this.onChangecertf = this.onChangecertf.bind(this);
     this.onChangemotiv = this.onChangemotiv.bind(this);
     this.onChangealcan = this.onChangealcan.bind(this);
-    this.imprimir = this.imprimir.bind(this)
+    this.imprimir = this.imprimir.bind(this);
+    this.onChangeindextra = this.onChangeindextra.bind(this);
+    this.onChangecerfextra = this.onChangecerfextra.bind(this);
     this.state = {
       compacc: "",
       numwork: "",
@@ -33,50 +102,87 @@ class Formreg2 extends Component {
       certf: "",
       motiv: "",
       alcan: "",
+      indexstyle: { display: "none" },
+      cerfexstyle: { display: "none" },
+      indextra: "",
+      cerfextra: "",
+      Nconfrm: { pointerEvents: "none" },
+      IsAllComplete: true,
     };
   }
-  imprimir(){
-    console.log(this.state)
+  imprimir() {
+    console.log(this.state);
   }
   onChangecompacc(e) {
+    auxcompacc = e.target.value;
     this.setState({
-      compacc: e.target.value
+      compacc: e.target.value,
     });
+    this.authclik();
   }
   onChangenumwork(e) {
+    auxnumwork = e.target.value;
     this.setState({
-      numwork:e.target.value
+      numwork: e.target.value,
     });
+    this.authclik();
   }
   onChangepfem(e) {
+    auxpfem = e.target.value;
     this.setState({
-      pfem:e.target.value
+      pfem: e.target.value,
     });
+    this.authclik();
   }
   onChangeitype(e) {
+    auxitype = e.target.value;
+    this.otrind(auxitype);
+
     this.setState({
-      itype:e.target.value
+      itype: e.target.value,
+    });
+    this.authclik();
+  }
+  onChangeindextra(e) {
+    auxindextra = e.target.value;
+    this.setState({
+      indextra: e.target.value,
+    });
+  }
+  onChangecerfextra(e) {
+    auxcerfextra = e.target.value;
+    this.setState({
+      cerfextra: e.target.value,
     });
   }
   onChangeaccomr(e) {
+    auxaccomr = e.target.value;
     this.setState({
-      accomr:e.target.value
+      accomr: e.target.value,
     });
+    this.authclik();
   }
   onChangecertf(e) {
+    auxcertf = e.target.value;
+    this.otrcetif(auxcertf);
     this.setState({
-      certf:e.target.value
+      certf: e.target.value,
     });
+    this.authclik();
   }
   onChangemotiv(e) {
+    auxmotiv = e.target.value;
     this.setState({
-      motiv:e.target.value
+      motiv: e.target.value,
     });
+    this.authclik();
   }
   onChangealcan(e) {
+    auxalcan = e.target.value;
     this.setState({
-      alcan:e.target.value
+      alcan: e.target.value,
     });
+    this.authclik();
   }
   render() {
     return (
@@ -92,7 +198,7 @@ class Formreg2 extends Component {
             </h5>
             <Row>
               <SeleccionCompAccion
-              onChange={this.onChangecompacc}
+                onChange={this.onChangecompacc}
                 className="SeleccionarAcc"
                 TituloInputNormal="Composición Accionaria de la Organización"
                 TituloInputSeleccion="Seleccionar Composición Accionaria"
@@ -108,7 +214,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectNumT
-              onChange ={this.onChangenumwork}
+                onChange={this.onChangenumwork}
                 className="SeleccionarNumTrab"
                 TituloInputNormal="Cantidad de Trabajadores Actuales en la Organización"
                 TituloInputSeleccion="Seleccionar Cantidad"
@@ -121,7 +227,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectNumFem
-              onChange ={this.onChangepfem}
+                onChange={this.onChangepfem}
                 className="SeleccionarNumMujeres"
                 TituloInputNormal="Porcentaje de Mujeres en su Empresa"
                 TituloInputSeleccion="Seleccionar Porcentaje"
@@ -135,7 +241,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectTipoInduc
-              onChange ={this.onChangeitype}
+                onChange={this.onChangeitype}
                 className="SeleccionarTipIndustria"
                 TituloInputNormal="Tipo de Industria en la que Opera la Organización"
                 TituloInputSeleccion="Seleccionar Tipo de Industria"
@@ -197,11 +303,21 @@ class Formreg2 extends Component {
                 opcion56="Vestimenta"
                 opcion57="Otro"
               ></SelectTipoInduc>
+              <label htmlFor="otrind" style={this.state.indexstyle}>
+                {" "}
+                ingrese su respuesta
+              </label>
+              <Input
+                name="otrind"
+                style={this.state.indexstyle}
+                className="form-control"
+                onChange={this.onChangeindextra}
+              ></Input>
             </Row>
 
             <Row>
               <SelectActividad
-              onChange ={this.onChangecompacc}
+                onChange={this.onChangeaccomr}
                 className="SeleccionarActividadCom"
                 TituloInputNormal="Actividad Comercial del Negocio"
                 TituloInputSeleccion="Seleccionar Actividad"
@@ -216,7 +332,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectCertif
-                onChange ={this.onChangecertf}
+                onChange={this.onChangecertf}
                 className="SeleccionarCertificaciones"
                 TituloInputNormal="Seleccione Si Posee Alguna de estas Certificaciones SocioAmbientales"
                 TituloInputSeleccion="Seleccione si posee o no posee "
@@ -238,11 +354,21 @@ class Formreg2 extends Component {
                 opcion16="Otra"
                 opcion17="No Cuento Con Sello Socioambiental"
               ></SelectCertif>
+              <label htmlFor="otrcerf" style={this.state.cerfexstyle}>
+                {" "}
+                ingrese su respuesta
+              </label>
+              <Input
+                className="form-control"
+                style={this.state.cerfexstyle}
+                name="otrcerf"
+                onChange={this.onChangecerfextra}
+              ></Input>
             </Row>
 
             <Row>
               <SelectMotivacion
-              onChange ={this.onChangemotiv}
+                onChange={this.onChangemotiv}
                 className="SeleccionarMotivacion"
                 TituloInputNormal="¿Qué Motivación Tienes al Tomar este Apoyo y Orientación sobre Gestión Sustentable?"
                 TituloInputSeleccion="Seleccionar Motivación y Orientaición"
@@ -260,7 +386,7 @@ class Formreg2 extends Component {
 
             <Row>
               <SelectAlcances
-              onChange ={this.onChangealcan}
+                onChange={this.onChangealcan}
                 className="SeleccionarAlcances"
                 TituloInputNormal="Elija los Alcances de la Medición de Impactoque Espera Obtener para el Negocio"
                 TituloInputSeleccion="Seleccione los Alcances"
@@ -272,9 +398,20 @@ class Formreg2 extends Component {
                 opcion6="Objetivos de Desarrollo Sostenible 2030"
               ></SelectAlcances>
             </Row>
-            <input type="button" value ="imprimir datos" onClick={this.imprimir} />
-            <Link to="/registro/enc">
-              <button className="Button">Siguiente</button>
+            <input
+              type="button"
+              value="imprimir datos"
+              onClick={this.imprimir}
+            />
+            <Link to="/registro/enc" style={this.state.Nconfrm}>
+              <button
+                className="btn btn-lg btn-block btn-light"
+                style={{ width: "80%" }}
+                onClick={this.compb}
+                disabled={this.state.IsAllComplete}
+              >
+                Siguiente
+              </button>
             </Link>
           </Form>
         </section>

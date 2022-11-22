@@ -1,15 +1,11 @@
 import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
 import css from "../css/logcss.css";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../Services/auth.service.js";
 import { withRouter } from '../common/with-router';
-
+import logimg from "../images/login.png"
 const required = value => {
   if (!value) {
     return (
@@ -97,6 +93,9 @@ class Logp extends Component {
               this.form = c;
             }}
           >
+                <img src={logimg} alt="logimg"
+              style={{width:"50%",marginLeft:"25%"}}/>
+            <div className="text-center"><h2>inicio de sesion</h2></div>
             <div className="form-group">
               <label htmlFor="username">Username</label>
               <Input

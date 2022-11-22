@@ -7,7 +7,7 @@ export default function SelectAlcances(props) {
 <Form>
     <Form.Label>{props.TituloInputNormal}</Form.Label>  
     <Form.Select className="mb-3" controlID="InputSeleccion6" onChange={props.onChange}>  
-    <option>{props.TituloInputSeleccion}</option>
+    <option value="">{props.TituloInputSeleccion}</option>
     <option value={props.opcion1}>{props.opcion1}</option>
     <option value={props.opcion2}>{props.opcion2}</option>
     <option value={props.opcion3}>{props.opcion3}</option>

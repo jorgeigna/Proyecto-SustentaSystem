@@ -26,14 +26,14 @@ body {
   color: rgb(0, 0, 0);
   background: rgba(211, 211, 211, 0.842);
   padding: 20px;
-  margin-top: 30%;
+  margin-top: 40%;
   margin-bottom: -20%;
   border-radius: 3%;
   width: 700px;
 }
 @media (min-width: 768px) {
   .Formulario {
-    margin: auto;
+    
     width: 500px;
     margin-top: 20%;
     border-radius: 2%;
@@ -155,4 +155,7 @@ top: 20px;
   margin-bottom: 10px;
   width: 80%;
   padding-top: 20px;
+}
+.containerform{
+  position:static
 }

@@ -4,12 +4,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { withRouter } from "../common/with-router";
 
-import {
-  FormGroup,
-  FormLabel,
-  InputGroup,
-  FormControl,
-} from "react-bootstrap";
+import { FormGroup, FormLabel, InputGroup, FormControl } from "react-bootstrap";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import { Link } from "react-router-dom";
@@ -61,29 +56,47 @@ const notnumber = (value) => {
   }
 };
 const estelefono = (value) => {
-  if(!isMobilePhone(value)){
-return(
-  <div className="alert alert-danger" role="alert">
-debe ser un numero de telefono!!!
-  </div>
-)
+  if (!isMobilePhone(value)) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        debe ser un numero de telefono!!!
+      </div>
+    );
   }
-}
+};
+var auxNombre = "";
+var auxApellido = "";
+var auxCorreo = "";
+var auxAñoForm = "";
+var auxArea = "";
+var auxPais = "";
+var auxNombreOrganizacion = "";
+var auxMontoFact = "";
+var auxTelefono = "";
+var auxContraseña = "";
+var dts = [];
+var auxExtraArea = "";
+var auxNFiscal = "";
+var auxcdarea = "";
+var auxRegion = "";
+var auxComuna = "";
+var auxPagWeb = "";
+var auxRedes = "";
 class FormReg1 extends Component {
-
-
   authclik() {
     if (
-      this.state.Pais &&
-      this.state.Nombre &&
-      this.state.Apellido &&
-      this.state.Correo &&
-      this.state.AñoForm &&
-      this.state.MontoFact &&
-      this.state.NombreOrganizacion &&
-      this.state.Area &&
-      this.state.Telefono &&
-      this.state.AñoForm
+      auxRegion &&
+      auxComuna &&
+      auxNombre &&
+      auxApellido &&
+      auxCorreo &&
+      auxAñoForm &&
+      auxArea &&
+      auxPais &&
+      auxNombreOrganizacion &&
+      auxMontoFact &&
+      auxTelefono &&
+      auxContraseña
     ) {
       this.setState({
         IsAllComplete: false,
@@ -107,10 +120,7 @@ class FormReg1 extends Component {
         console.log(error);
       });
   }
-  paisSeleccionado(pslec) {
-    console.log(pslec);
-    console.log(this.state);
-  }
+
   compotro(aselec) {
     if (aselec === "otro") {
       this.setState({
@@ -124,7 +134,25 @@ class FormReg1 extends Component {
     }
   }
   compb() {
-    localStorage.setItem("p1", JSON.stringify(this.state));
+    auxTelefono = auxcdarea + auxTelefono;
+    dts = [
+      auxNombre,
+      auxApellido,
+      auxCorreo,
+      auxContraseña,
+      auxArea,
+      auxExtraArea,
+      auxAñoForm,
+      auxTelefono,
+      auxPais,
+      auxRegion,
+      auxComuna,
+      auxNFiscal,
+      auxMontoFact,
+      auxPagWeb,
+      auxRedes,
+    ];
+    localStorage.setItem("data", JSON.stringify(dts));
   }
   constructor(props) {
     super(props);
@@ -169,6 +197,8 @@ class FormReg1 extends Component {
       Redes: "",
       successful: false,
       message: "",
+      confill: false,
+      regfill: false,
       arsistyle: { display: "none" },
       IsAllComplete: true,
       Nconfrm: { pointerEvents: "none" },
@@ -176,6 +206,7 @@ class FormReg1 extends Component {
   }
 
   onChangeNombre(e) {
+    auxNombre = e.target.value;
     this.setState({
       Nombre: e.target.value,
     });
@@ -183,112 +214,144 @@ class FormReg1 extends Component {
   }
   print() {
     console.log(this.state);
+    console.log(auxNombre);
   }
   onChangeCorreo(e) {
+    auxCorreo = e.target.value;
     this.setState({
       Correo: e.target.value,
     });
     this.authclik();
   }
   onChangeExtraArea(e) {
+    auxExtraArea = e.target.value;
     this.setState({
       ExtraArea: e.target.value,
     });
     this.authclik();
   }
   onChangeContraseña(e) {
+    auxContraseña = e.target.value;
     this.setState({
       Contraseña: e.target.value,
     });
     this.authclik();
   }
   onChangeApellido(e) {
+    auxApellido = e.target.value;
     this.setState({
       Apellido: e.target.value,
     });
     this.authclik();
   }
   onChangeNombreOrganizacion(e) {
+    auxNombreOrganizacion = e.target.value;
     this.setState({
       NombreOrganizacion: e.target.value,
     });
     this.authclik();
   }
   onChangeArea(e) {
-    const asl = e.target.value;
+    auxArea = e.target.value;
+
     this.setState({
       Area: e.target.value,
     });
-    this.compotro(asl);
+    this.compotro(auxArea);
     this.authclik();
   }
   onChangeTelefono(e) {
+    auxTelefono = e.target.value;
     this.setState({
       Telefono: e.target.value,
     });
     this.authclik();
   }
   onChangeAñoForm(e) {
+    auxAñoForm = e.target.value;
     this.setState({
       AñoForm: e.target.value,
     });
     this.authclik();
   }
   onChangeNFiscal(e) {
+    auxNFiscal = e.target.value;
     this.setState({
       NFiscal: e.target.value,
     });
     this.authclik();
   }
   onChangeRegion(e) {
-    this.setState({
-      Region: e.target.value,
-    });
+    if (e.target.value !== "") {
+      auxRegion = e.target.value;
+      this.setState({
+        Region: e.target.value,
+        regfill: true,
+      });
+    } else {
+      auxRegion = "";
+      this.setState({
+        Region: "",
+        regfill: false,
+      });
+    }
   }
   onChangeComuna(e) {
+    auxComuna = e.target.value;
     this.setState({
       Comuna: e.target.value,
     });
   }
   OnChangeMontoFact(e) {
+    auxMontoFact = e.target.value;
     this.setState({
       MontoFact: e.target.value,
     });
     this.authclik();
   }
   onChangePagWeb(e) {
+    auxPagWeb = e.target.value;
     this.setState({
       PagWeb: e.target.value,
     });
   }
   onChangeRedes(e) {
+    auxRedes = e.target.value;
     this.setState({
       Redes: e.target.value,
     });
   }
   onChangePais(e) {
-    let psl = e.target.value;
-    let newcda = "";
-
-    for (let i = 0; i < this.state.countries.length; i++) {
-      if (this.state.countries[i].name === psl) {
-        newcda = "+" + this.state.countries[i].callingCodes[0];
-        break;
+    auxPais = e.target.value;
+    if (auxPais !== "") {
+      for (let i = 0; i < this.state.countries.length; i++) {
+        if (this.state.countries[i].name === auxPais) {
+          auxcdarea = "+" + this.state.countries[i].callingCodes[0];
+          break;
+        }
       }
-    }
 
-    console.log(newcda);
-    this.setState({
-      Pais: psl,
-      cdarea: newcda,
-    });
-    this.authclik();
+      this.setState({
+        Pais: auxPais,
+        cdarea: auxcdarea,
+        confill: true,
+      });
+      this.authclik();
+    } else {
+      auxPais = "";
+      auxcdarea = "";
+      this.setState({
+        Pais: "",
+        cdarea: "+1",
+        confill: false,
+      });
+    }
   }
 
   render() {
     return (
       <Fragment>
-        <div>
+        <div className="containerform">
           <section id="Formulario">
             <Form>
               <h1>Formulario de registro</h1>
@@ -325,16 +388,16 @@ class FormReg1 extends Component {
                         validations={[required, notnumber]}
                       />
                     </div>
-                    </Row>
+                  </Row>
                   <Row className="fila3">
                     <label htmlFor="apellido">apellido</label>
-                  
+
                     <Input
                       name="apellido"
                       placeholder="ingrese su apelldo"
                       defaultValue={this.state.Apellido}
                       onChange={this.onChangeApellido}
-                      validations={[required,notnumber]}
+                      validations={[required, notnumber]}
                       className="form-control"
                     />
                   </Row>
@@ -419,7 +482,7 @@ class FormReg1 extends Component {
                           className="form-control"
                           onChange={this.onChangeTelefono}
                           type="text"
-                          validations={[required,isnumber,estelefono]}
+                          validations={[required, isnumber, estelefono]}
                           placeholder="ingrese su telefono"
                         />
                       </InputGroup>
@@ -475,21 +538,25 @@ class FormReg1 extends Component {
                     </FormGroup>
                     <FormGroup as={Col}>
                       <label htmlFor="regiones">Region</label>
-                      <select
+                      <Input
                         name="regiones"
                         id="rselect"
-                        className="form-select"
-                        disabled
-                      ></select>
+                        className="form-control"
+                        disabled={!this.state.confill}
+                        onChange={this.onChangeRegion}
+                        validations={[required]}
+                      />
                     </FormGroup>
                     <FormGroup as={Col}>
                       <label htmlFor="comunas">Ciudad</label>
-                      <select
+                      <Input
                         name="comunas"
                         id="cselect"
-                        className="form-select"
-                        disabled
-                      ></select>
+                        className="form-control"
+                        disabled={!this.state.regfill}
+                        onChange={this.onChangeComuna}
+                        validations={[required]}
+                      />
                     </FormGroup>
                   </Row>
 
@@ -497,12 +564,12 @@ class FormReg1 extends Component {
                     Monto de Facturación del Último Año Fiscal
                   </label>
                   <Input
-                  placeholder="ingrese el monto de facturacion del ultimo año fiscal"
+                    placeholder="ingrese el monto de facturacion del ultimo año fiscal"
                     className="form-control"
                     name="MontoFact"
                     value={this.MontoFact}
                     onChange={this.OnChangeMontoFact}
-                    validations={[required,isnumber]}
+                    validations={[required, isnumber]}
                   />
                   <label htmlFor="PagWeb">Sitio Web de la Organiación</label>
                   <Input
@@ -517,7 +584,7 @@ class FormReg1 extends Component {
                     Redes Sociales de la Organización
                   </label>
                   <Input
-                 placeholder=" ingrese los nombres de las redes sociales que utiliza"
+                    placeholder=" ingrese los nombres de las redes sociales que utiliza"
                     className="form-control"
                     name="Redes"
                     value={this.Redes}
@@ -533,6 +600,7 @@ class FormReg1 extends Component {
                       onClick={this.compb}
                       className="btn btn-lg btn-block btn-light"
                       disabled={this.state.IsAllComplete}
+                      style={{ width: "80%" }}
                     >
                       siguiente
                     </button>
