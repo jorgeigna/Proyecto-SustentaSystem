@@ -2,11 +2,11 @@ import axios from "axios";
 
 const API_URL = "http://localhost:8080/api/auth/";
 class AuthService {
-  login(username, password) {
+  login(Correo, Contraseña) {
     return axios
       .post(API_URL + "signin", {
-        username,
         password,
+        Contraseña,
       })
       .then((response) => {
         if (response.data.accessToken) {
@@ -16,9 +16,63 @@ class AuthService {
         return response.data;
       });
   }
-register(){
-  
-}
+  register(
+    auxNombre,
+    auxApellido,
+    auxCorreo,
+    auxContraseña,
+    auxNombreOrganizacion,
+    auxArea,
+    auxExtraArea,
+    auxAñoForm,
+    auxTelefono,
+    auxPais,
+    auxRegion,
+    auxComuna,
+    auxNFiscal,
+    auxMontoFact,
+    auxPagWeb,
+    auxRedes,
+    auxcompacc,
+    auxnumwork,
+    auxpfem,
+    auxitype,
+    auxindextra,
+    auxaccomr,
+    auxcertf,
+    auxcerfextra,
+    auxmotiv,
+    auxalcan
+  ) {
+    return axios.post(API_URL + "signup", {
+      auxNombre,
+      auxApellido,
+      auxCorreo,
+      auxContraseña,
+      auxNombreOrganizacion,
+      auxArea,
+      auxExtraArea,
+      auxAñoForm,
+      auxTelefono,
+      auxPais,
+      auxRegion,
+      auxComuna,
+      auxNFiscal,
+      auxMontoFact,
+      auxPagWeb,
+      auxRedes,
+      auxcompacc,
+      auxnumwork,
+      auxpfem,
+      auxitype,
+      auxindextra,
+      auxaccomr,
+      auxcertf,
+      auxcerfextra,
+      auxmotiv,
+      auxalcan
+    });
+  }
   logout() {
     localStorage.removeItem("user");
   }
