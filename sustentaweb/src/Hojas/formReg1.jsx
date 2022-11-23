@@ -142,6 +142,7 @@ class FormReg1 extends Component {
       auxApellido,
       auxCorreo,
       auxContraseña,
+      auxNombreOrganizacion,
       auxArea,
       auxExtraArea,
       auxAñoForm,
