@@ -8,6 +8,7 @@ html{
 }
 
 body {
+  
   background-image: url("../images/background.jpg");
   font-family: Arial, Helvetica, sans-serif;
   background-size: cover;
@@ -19,17 +20,15 @@ body {
   height: 100%;
 }
 #Formulario {
-  position: relative;
-  left: 50%;
-  top: 55%;
-  transform: translateX(-50%) translateY(-50%);
-  color: rgb(0, 0, 0);
-  background: rgba(211, 211, 211, 0.842);
-  padding: 20px;
-  margin-top: 40%;
-  margin-bottom: -20%;
-  border-radius: 3%;
-  width: 700px;
+width: 40%;
+color: rgb(0, 0, 0);
+background: rgba(211, 211, 211, 0.842);
+transform: translateX(70%);
+position: static;
+border-radius: 2%;
+padding: 20px;
+margin: 30px;
+
 }
 @media (min-width: 768px) {
   .Formulario {
@@ -83,17 +82,14 @@ body {
 }
 #Emcuesta {
   
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  color: rgb(0, 0, 0);
-  background: rgba(211, 211, 211, 0.842);
-  padding: 20px;
-  margin-top: 45%;
-  margin-bottom: -40%;
-  border-radius: 2%;
-  width: 800px;
+width: 40%;
+color: rgb(0, 0, 0);
+background: rgba(211, 211, 211, 0.842);
+transform: translateX(70%);
+position: static;
+border-radius: 2%;
+padding: 20px;
+margin: 30px;
 }
 #resuform {
   
@@ -137,25 +133,29 @@ font-size: large;
 }
 #acc{
 width: 80%;
-left: 10%;
-padding-top: 150px;
-position:relative;
+position:static;
 padding-bottom: 20px;
-top: 20px;
+padding-left: 15%
 }
 .cardtittle{
-  position: absolute;
-  top: 15%;
-  left: 10%;
+  position: static;
+  padding-left: 16%
   
 }
 .cardbottom{
   position:relative;
-  left: 10%;
-  margin-bottom: 10px;
+  padding-left: 15%;
+  margin-bottom: 1px;
   width: 80%;
-  padding-top: 20px;
+  padding-top: 2px;
+  
 }
-.containerform{
-  position:static
+.containerfaq{
+  position: static;
+  border-radius: 2%;
+  
+  background-color: rgba(214, 214, 203, 0.651);
+  transform: translateX(20%);
+  width: 70%;
+
 }

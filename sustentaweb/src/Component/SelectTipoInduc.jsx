@@ -6,7 +6,7 @@ export default function SelectTipoInduc(props) {
   return (
 <Form>
     <Form.Label>{props.TituloInputNormal}</Form.Label> 
-    <Form.Select className="mb-3" controlID="InputSeleccion11" onChange={props.onChange}>   
+    <Form.Select className="mb-3"  onChange={props.onChange}>   
     <option value="">{props.TituloInputSeleccion}</option>
     <option value={props.opcion1}>{props.opcion1}</option>
     <option value={props.opcion2}>{props.opcion2}</option>

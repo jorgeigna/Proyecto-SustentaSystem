@@ -7,7 +7,7 @@ export default function SeleccionAño(props){
     
             <Form>
                 <Form.Label>{props.TituloInputNormal}</Form.Label>
-                <Form.Select className="mb-5" controlID="InputSeleccion2" onChange={props.onChange}>
+                <Form.Select className="mb-5"  onChange={props.onChange}>
                         <option>{props.TituloInputSeleccion}</option>
                         <option value={props.opcion1}>{props.opcion1}</option>
                         <option value={props.opcion2}>{props.opcion2}</option>

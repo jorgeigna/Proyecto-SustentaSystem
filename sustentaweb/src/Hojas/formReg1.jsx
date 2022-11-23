@@ -7,7 +7,7 @@ import { withRouter } from "../common/with-router";
 import { FormGroup, FormLabel, InputGroup, FormControl } from "react-bootstrap";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
-import { Link } from "react-router-dom";
+import { Link   } from "react-router-dom";
 import { isEmail, isAlpha, isMobilePhone, isNumeric } from "validator";
 import axios from "axios";
 const required = (value) => {
@@ -19,6 +19,7 @@ const required = (value) => {
     );
   }
 };
+
 const email = (value) => {
   if (!isEmail(value)) {
     return (
@@ -46,6 +47,7 @@ const isnumber = (value) => {
     );
   }
 };
+
 const notnumber = (value) => {
   if (!isAlpha(value)) {
     return (
@@ -174,7 +176,7 @@ class FormReg1 extends Component {
     this.onChangePagWeb = this.onChangePagWeb.bind(this);
     this.onChangeRedes = this.onChangeRedes.bind(this);
     this.onChangeExtraArea = this.onChangeExtraArea.bind(this);
-    this.print = this.print.bind(this);
+
     this.state = {
       countries: [],
       regions: [],
@@ -211,10 +213,6 @@ class FormReg1 extends Component {
       Nombre: e.target.value,
     });
     this.authclik();
-  }
-  print() {
-    console.log(this.state);
-    console.log(auxNombre);
   }
   onChangeCorreo(e) {
     auxCorreo = e.target.value;
@@ -296,6 +294,7 @@ class FormReg1 extends Component {
       });
     }
   }
+
   onChangeComuna(e) {
     auxComuna = e.target.value;
     this.setState({
@@ -383,7 +382,7 @@ class FormReg1 extends Component {
                         name="nombre"
                         placeholder="ingrese su nombre"
                         className="form-control"
-                        defaultValue={this.state.Nombre}
+                        value={this.state.Nombre}
                         onChange={this.onChangeNombre}
                         validations={[required, notnumber]}
                       />
@@ -395,7 +394,7 @@ class FormReg1 extends Component {
                     <Input
                       name="apellido"
                       placeholder="ingrese su apelldo"
-                      defaultValue={this.state.Apellido}
+                      value={this.state.Apellido}
                       onChange={this.onChangeApellido}
                       validations={[required, notnumber]}
                       className="form-control"
@@ -590,17 +589,13 @@ class FormReg1 extends Component {
                     value={this.Redes}
                     onChange={this.onChangeRedes}
                   />
-                  <input
-                    type="button"
-                    onClick={this.print}
-                    value="imprimir datos"
-                  />
+
                   <Link to="/registro/pag2" style={this.state.Nconfrm}>
                     <button
                       onClick={this.compb}
                       className="btn btn-lg btn-block btn-light"
                       disabled={this.state.IsAllComplete}
-                      style={{ width: "80%" }}
+                      style={{ width: "90%", marginLeft:"5%",marginTop:"10px" }}
                     >
                       siguiente
                     </button>

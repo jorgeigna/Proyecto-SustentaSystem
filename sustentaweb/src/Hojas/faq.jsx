@@ -5,10 +5,14 @@ import Accordion from "react-bootstrap/Accordion";
 export default class Faq extends Component {
   render() {
     return (
-      <Fragment>
+      <Fragment >
+        <div className="containerfaq">
         <div className="cardtittle">
           <h1 className="Title">FAQ</h1>
-          <h5>en este apartado se contestan algunas de las dudas mas comunes de nuestros clientes</h5>
+          <h5>
+            en este apartado se contestan algunas de las dudas mas comunes de
+            nuestros clientes
+          </h5>
         </div>
         <Accordion id="acc">
           <Accordion.Item eventKey="0" className="achead">
@@ -62,128 +66,50 @@ export default class Faq extends Component {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="5" className="achead">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
+            <Accordion.Header>
+              ¿Qué es diversidad, inclusión y equidad en los negocios?
+            </Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              El involucramiento con las partes interesadas, es sinónimo de
+              diversidad, inclusión y equidad
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="6" className="achead">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
+            <Accordion.Header>
+              ¿Qué es la economia circular?¿Qué no es economia circular?
+            </Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              La economía circular es una estrategia que brinda oportunidades
+              rentables para que las organizaciones puedan planificar y hacer
+              eficientes sus procesos con el objetivo de convertir residuos en
+              recursos, disminuyendo volatilidad de precios en materias primas y
+              mejorando su relacionamiento con los grupos de interés. La
+              economía circular tiene por objetivo reducir el impacto ambiental
+              relacionado a la generación de residuos y promover un modelo de
+              negocios diferente, proponiendo un cambio en los sistemas lineales
+              de producción y consumo, incorporando el eco diseño, la
+              reutilización, reciclaje y valorización.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="7" className="achead">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
+            <Accordion.Header>¿Qué son los ODS 2030?</Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              El mundo es un lugar complejo, cambiante; pero con problemas
+              comunes. Desde esa complejidad, la Oraganización de las Naciones
+              Unidas aprobó la Agenda 2030 sobre el Desarrollo Sostenible, una
+              oportunidad para que los países y sus sociedades emprendan un
+              nuevo camino con el que mejorar la vida de todos, sin dejar a
+              nadie atrás. Incluye ámbitos económicos, ámbitos sociales, ámbitos
+              ambientales
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="8" className="achead">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="9" className="achead">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="10" className="achead">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="11" className="achead">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="12" className="achead">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="13" className="achead">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="14" className="achead">
-            <Accordion.Header>Accordion Item #2</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion.Body>
-          </Accordion.Item>
+        
         </Accordion>
         <div className="cardbottom">
-          <h5 style={{fontWeight:"bold"}}>si tienes otras preguntas no dudes en contactarnos</h5>
+          <h5 style={{ fontWeight: "bold" }}>
+            si tienes otras preguntas no dudes en contactarnos
+          </h5>
+        </div>
         </div>
       </Fragment>
     );

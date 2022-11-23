@@ -90,7 +90,6 @@ class Formreg2 extends Component {
     this.onChangecertf = this.onChangecertf.bind(this);
     this.onChangemotiv = this.onChangemotiv.bind(this);
     this.onChangealcan = this.onChangealcan.bind(this);
-    this.imprimir = this.imprimir.bind(this);
     this.onChangeindextra = this.onChangeindextra.bind(this);
     this.onChangecerfextra = this.onChangecerfextra.bind(this);
     this.state = {
@@ -110,9 +109,7 @@ class Formreg2 extends Component {
       IsAllComplete: true,
     };
   }
-  imprimir() {
-    console.log(this.state);
-  }
+
   onChangecompacc(e) {
     auxcompacc = e.target.value;
     this.setState({
@@ -398,15 +395,11 @@ class Formreg2 extends Component {
                 opcion6="Objetivos de Desarrollo Sostenible 2030"
               ></SelectAlcances>
             </Row>
-            <input
-              type="button"
-              value="imprimir datos"
-              onClick={this.imprimir}
-            />
+
             <Link to="/registro/enc" style={this.state.Nconfrm}>
               <button
                 className="btn btn-lg btn-block btn-light"
-                style={{ width: "80%" }}
+                style={{ width: "90%",marginLeft:"5%",marginTop:"10px" }}
                 onClick={this.compb}
                 disabled={this.state.IsAllComplete}
               >
