@@ -6,6 +6,7 @@ import SeleccionCompAccion from "../Component/SeleccionCompAccion";
 import SelectActividad from "../Component/SelectActividad";
 import SelectAlcances from "../Component/SelectAlcances";
 import Input from "react-validation/build/input";
+import CheckButton from "react-validation/build/button";
 
 import SelectCertif from "../Component/SelectCertif";
 import SelectNumFem from "../Component/SelectNumFem";
@@ -73,9 +74,20 @@ class Formreg2 extends Component {
     }
   }
   compb() {
-    dts = JSON.parse(localStorage.getItem("data"))
-    var dts2 = [auxcompacc,auxnumwork,auxpfem,auxitype,auxindextra,auxaccomr,auxcertf,auxcerfextra,auxmotiv,auxalcan]
-    var dts3 = dts.concat(dts2)
+    dts = JSON.parse(localStorage.getItem("data"));
+    var dts2 = [
+      auxcompacc,
+      auxnumwork,
+      auxpfem,
+      auxitype,
+      auxindextra,
+      auxaccomr,
+      auxcertf,
+      auxcerfextra,
+      auxmotiv,
+      auxalcan,
+    ];
+    var dts3 = dts.concat(dts2);
     localStorage.setItem("data", JSON.stringify(dts3));
   }
   constructor(props) {
@@ -181,11 +193,27 @@ class Formreg2 extends Component {
     });
     this.authclik();
   }
+  handleButton(e) {
+    e.preventDefault();
+    this.form.validateAll();
+    this.compb();
+    this.setState({
+      loading: true,
+    });
+    if (this.checkBtn.context._errors.length === 0) {
+      this.props.router.navigate("/registro/pag2");
+    }
+  }
   render() {
     return (
       <Fragment>
         <section id="Formulario">
-          <Form>
+          <Form
+            onSubmit={this.handleLogin}
+            ref={c => {
+              this.form = c;
+            }}
+          >
             <h1>Formulario de registro</h1>
             <h5>
               Para conocer un poco más sobre la actual situación en relación a
@@ -399,13 +427,15 @@ class Formreg2 extends Component {
             <Link to="/registro/enc" style={this.state.Nconfrm}>
               <button
                 className="btn btn-lg btn-block btn-light"
-                style={{ width: "90%",marginLeft:"5%",marginTop:"10px" }}
+                style={{ width: "90%", marginLeft: "5%", marginTop: "10px" }}
                 onClick={this.compb}
                 disabled={this.state.IsAllComplete}
               >
                 Siguiente
               </button>
+
             </Link>
+            
           </Form>
         </section>
       </Fragment>

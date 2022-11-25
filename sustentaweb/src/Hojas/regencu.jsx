@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import AuthService from "../Services/auth.service";
 
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
@@ -31,9 +32,41 @@ class Regencu extends Component {
     this.state = {
       encompl: false,
       linklav: { pointerEvents: "none" },
+      successful: false,
+      message: ""
+
     };
   }
-  buttonHandler() {
+  buttonHandler(e) {
+    e.preventDefault();
+    this.setState({
+      message: "",
+      successful: false
+    });
+    AuthService.register(
+   
+      ).then(
+        response => {
+          this.setState({
+            message: response.data.message,
+            successful: true
+          });
+        },
+        error => {
+          const resMessage =
+            (error.response &&
+              error.response.data &&
+              error.response.data.message) ||
+            error.message ||
+            error.toString();
+
+          this.setState({
+            successful: false,
+            message: resMessage
+          });
+        }
+      );
+   
     rps = [
       resp1,
       resp2,

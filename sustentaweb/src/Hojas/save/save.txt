@@ -1,0 +1,10 @@
+                  <Link to="/registro/pag2" style={this.state.Nconfrm}>
+                    <button
+                      onClick={this.compb}
+                      className="btn btn-lg btn-block btn-light"
+                      disabled={this.state.IsAllComplete}
+                      style={{ width: "90%", marginLeft:"5%",marginTop:"10px" }}
+                    >
+                      siguiente
+                    </button>
+                  </Link>
