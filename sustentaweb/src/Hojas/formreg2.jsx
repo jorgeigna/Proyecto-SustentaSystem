@@ -25,7 +25,6 @@ var auxmotiv = "";
 var auxalcan = "";
 var auxindextra = "";
 var auxcerfextra = "";
-var dts = {};
 class Formreg2 extends Component {
   authclik() {
     if (
@@ -74,21 +73,20 @@ class Formreg2 extends Component {
     }
   }
   compb() {
-    dts = JSON.parse(localStorage.getItem("data"));
-    var dts2 = [
-      auxcompacc,
-      auxnumwork,
-      auxpfem,
-      auxitype,
-      auxindextra,
-      auxaccomr,
-      auxcertf,
-      auxcerfextra,
-      auxmotiv,
-      auxalcan,
-    ];
-    var dts3 = dts.concat(dts2);
-    localStorage.setItem("data", JSON.stringify(dts3));
+    let dts = JSON.parse(localStorage.getItem("data"));
+     
+      dts.compacc = auxcompacc;
+      dts.numwork = auxnumwork;
+      dts.pfem = auxpfem;
+      dts.itype = auxitype;
+      dts.indextra = auxindextra;
+      dts.accomr = auxaccomr;
+      dts.certf = auxcertf;
+      dts.cerfextra = auxcerfextra;
+      dts.motiv = auxmotiv;
+      dts.alcan = auxalcan;
+
+   localStorage.setItem("data", JSON.stringify(dts));
   }
   constructor(props) {
     super(props);
@@ -423,7 +421,7 @@ class Formreg2 extends Component {
                 opcion6="Objetivos de Desarrollo Sostenible 2030"
               ></SelectAlcances>
             </Row>
-
+            <input type="button" value="testbutton" onClick={this.compb}/>
             <Link to="/registro/enc" style={this.state.Nconfrm}>
               <button
                 className="btn btn-lg btn-block btn-light"

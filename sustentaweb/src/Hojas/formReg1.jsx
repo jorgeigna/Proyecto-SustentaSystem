@@ -4,11 +4,9 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { withRouter } from "../common/with-router";
 import CheckButton from "react-validation/build/button";
-
-import { FormGroup, FormLabel, InputGroup, FormControl } from "react-bootstrap";
+import { FormGroup, FormLabel, InputGroup, FormControl, Stack } from "react-bootstrap";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
-import { Link, navigate } from "react-router-dom";
 import { isEmail, isAlpha, isMobilePhone, isNumeric } from "validator";
 import axios from "axios";
 const required = (value) => {
@@ -150,6 +148,12 @@ exrate(){
     .then((res) =>{
       this.setState({ regions: res.data });
       var sl = document.getElementById("stselec")
+      sl.innerHTML= "";
+      let ftopt = document.createElement("option")
+      ftopt.value =""
+      ftopt.id = ""
+      ftopt.innerHTML = "Seleccione su region/ciudad"
+      sl.appendChild(ftopt)
       for (var i = 0; i< res.data.length; i++){
         var opt = document.createElement("option")
         opt.value = res.data[i].name
@@ -175,6 +179,12 @@ getcities(){
   .then((res) =>{
     this.setState({ subregions: res.data });
     var cml = document.getElementById("comsel")
+    cml.innerHTML= ""
+    let ftopt = document.createElement("option")
+    ftopt.value =""
+    ftopt.id = ""
+    ftopt.innerHTML = "Seleccione su ciudad"
+    cml.appendChild(ftopt)
     for (var i = 0; i< res.data.length; i++){
       var opt = document.createElement("option")
       opt.value = res.data[i].name
@@ -206,25 +216,25 @@ getcities(){
   }
   compb() {
     auxTelefono = auxcdarea + auxTelefono;
-    dts = [
-      auxNombre,
-      auxApellido,
-      auxCorreo,
-      auxContraseña,
-      auxNombreOrganizacion,
-      auxArea,
-      auxExtraArea,
-      auxAñoForm,
-      auxTelefono,
-      auxPais,
-      auxRegion,
-      auxComuna,
-      auxNFiscal,
-      auxMontoFact,
-      auxdivisa,
-      auxPagWeb,
-      auxRedes,
-    ];
+    dts = {
+      Nombre : auxNombre,
+      Apellido : auxApellido, 
+      Correo : auxCorreo,
+      Contraseña : auxContraseña,
+      NombreOrganizacion : auxNombreOrganizacion,
+      Area : auxArea,
+      ExtraArea : auxExtraArea,
+      AñoForm : auxAñoForm,
+      Telefono : auxTelefono,
+      Pais : auxPais,
+      Region : auxRegion,
+      Comuna : auxComuna,
+      NFiscal : auxNFiscal,
+      MontoFact : auxMontoFact,
+      divisa : auxdivisa ,
+      PagWeb : auxPagWeb,
+      Redes : auxRedes,
+     } ;
     localStorage.setItem("data", JSON.stringify(dts));
   }
   constructor(props) {
