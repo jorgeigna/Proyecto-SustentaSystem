@@ -19,6 +19,8 @@ export default class Resultado extends Component {
       imgl.alt = "nivel1";
       imgc.appendChild(imgl);
       const texth = document.createElement("h5");
+      localStorage.removeItem("lvl")
+      localStorage.removeItem("data")
 
       texth.innerHTML =
         "encontramos que su nivel es suficiente para empezar la construccion de medidas para su empreas, por lo que lo invitamos a contestar las encuestas de nivel uno que se han habilitado para usted, a medida que se avance con las medidas avanzaremos en la creacion de politicas a su medida";
@@ -33,6 +35,8 @@ export default class Resultado extends Component {
       texth.innerHTML =
         "encontramos que su nivel es adecuado para definir los ODS y plantear la politica sustentable que llevara su empresa, por favor lo invitamos a contestar las encuestas disponibles en la pestaña encuestas para definir una politica a su medida";
       textc.appendChild(texth);
+      localStorage.removeItem("lvl")
+      localStorage.removeItem("data")
     }
     if (desimg === 3) {
       const imgl = document.createElement("img");
@@ -43,12 +47,15 @@ export default class Resultado extends Component {
       texth.innerHTML =
         "encontramos que su empresa esta preparada para integrar politicas ambientales avanzadas y dar el paso final en la legalizacion de las mismas, lo invitamos a contestar las encuestas disponibles para evaluar las politicas que ya tiene establecidas";
       textc.appendChild(texth);
+      localStorage.removeItem("lvl")
+      localStorage.removeItem("data")
     }
     if (desimg === 0) {
       const imgl = document.createElement("img");
       imgl.src = nivel0;
       imgl.alt = "nivel2 contdiv";
       imgc.appendChild(imgl);
+
 
       const texth = document.createElement("h5");
       texth.innerHTML =
@@ -59,11 +66,17 @@ export default class Resultado extends Component {
     }
   }
 minlvl(){
-  const mensaje = "el usuario x de correo x ha calificado para el nivel mas bajo"
+  const uname = JSON.parse(localStorage.getItem("data")).Nombre
+  const ucorreo = JSON.parse(localStorage.getItem("data")).Correo
+  const mensaje = "el usuario "+uname+" de correo "+ucorreo+" ha calificado para el nivel mas bajo"
   console.log("tiene el nivel minimo")
   AuthService.sendmail(mensaje).then(
     (response) => {
-      console.log(response.data) },
+      console.log(response.data) 
+      localStorage.removeItem("lvl")
+      localStorage.removeItem("data")
+    },
+      
       (err) => {
         console.log(err.response.data)
       }
@@ -76,7 +89,7 @@ minlvl(){
           <Form>
             <h1>Resultado</h1>
             <h5>
-              En base a las respuestas proporcionadas, su nivel es
+              En base a las respuestas proporcionadas, su nivel es 
               {JSON.parse(localStorage.getItem("lvl"))}
             </h5>
             <br />
