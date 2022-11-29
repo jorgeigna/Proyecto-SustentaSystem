@@ -71,11 +71,17 @@ export default class App extends Component {
                     Home
                   </Link>
                 </Nav.Link>
+                {currentUser ? (
                 <Nav.Link>
                   <Link className="nav-link" to="/encuest">
                     Encuestas
                   </Link>
                 </Nav.Link>
+                ): (
+                  <Nav>
+
+                  </Nav>
+                )}
                 <Nav.Link>
                   <Link className="nav-link" to="/about">
                     Sobre Nosotros
