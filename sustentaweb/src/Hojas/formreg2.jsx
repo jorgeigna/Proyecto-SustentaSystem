@@ -6,8 +6,6 @@ import SeleccionCompAccion from "../Component/SeleccionCompAccion";
 import SelectActividad from "../Component/SelectActividad";
 import SelectAlcances from "../Component/SelectAlcances";
 import Input from "react-validation/build/input";
-import CheckButton from "react-validation/build/button";
-
 import SelectCertif from "../Component/SelectCertif";
 import SelectNumFem from "../Component/SelectNumFem";
 import SelectNumT from "../Component/SelectNumT";
@@ -421,7 +419,6 @@ class Formreg2 extends Component {
                 opcion6="Objetivos de Desarrollo Sostenible 2030"
               ></SelectAlcances>
             </Row>
-            <input type="button" value="testbutton" onClick={this.compb}/>
             <Link to="/registro/enc" style={this.state.Nconfrm}>
               <button
                 className="btn btn-lg btn-block btn-light"

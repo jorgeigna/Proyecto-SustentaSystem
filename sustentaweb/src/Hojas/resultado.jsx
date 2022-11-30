@@ -89,8 +89,7 @@ minlvl(){
           <Form>
             <h1>Resultado</h1>
             <h5>
-              En base a las respuestas proporcionadas, su nivel es 
-              {JSON.parse(localStorage.getItem("lvl"))}
+              En base a las respuestas proporcionadas, su nivel es &nbsp;{JSON.parse(localStorage.getItem("lvl"))}
             </h5>
             <br />
             <br />

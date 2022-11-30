@@ -1,14 +1,11 @@
-
-html{
+html {
   height: 100%;
 }
 * {
   box-sizing: border-box;
-  
 }
 
 body {
-  
   background-image: url("../images/background.jpg");
   font-family: Arial, Helvetica, sans-serif;
   background-size: cover;
@@ -20,19 +17,17 @@ body {
   height: 100%;
 }
 #Formulario {
-width: 40%;
-color: rgb(0, 0, 0);
-background: rgba(211, 211, 211, 0.842);
-transform: translateX(70%);
-position: static;
-border-radius: 2%;
-padding: 20px;
-margin: 30px;
-
+  width: 40%;
+  color: rgb(0, 0, 0);
+  background: rgba(211, 211, 211, 0.842);
+  transform: translateX(70%);
+  position: static;
+  border-radius: 2%;
+  padding: 20px;
+  margin: 30px;
 }
 @media (min-width: 768px) {
   .Formulario {
-    
     width: 500px;
     margin-top: 20%;
     border-radius: 2%;
@@ -45,7 +40,6 @@ margin: 30px;
   border-color: lightgray;
   background-color: lightgray;
 }
-
 
 .carrouselcont {
   max-width: 95%;
@@ -81,15 +75,14 @@ margin: 30px;
   float: left;
 }
 #Emcuesta {
-  
-width: 40%;
-color: rgb(0, 0, 0);
-background: rgba(211, 211, 211, 0.842);
-transform: translateX(70%);
-position: static;
-border-radius: 2%;
-padding: 20px;
-margin: 30px;
+  width: 40%;
+  color: rgb(0, 0, 0);
+  background: rgba(211, 211, 211, 0.842);
+  transform: translateX(70%);
+  position: static;
+  border-radius: 2%;
+  padding: 20px;
+  margin: 30px;
 }
 #resuform {
   width: 40%;
@@ -101,65 +94,75 @@ margin: 30px;
   padding: 20px;
   margin: 30px;
 }
-.abfrag{
+.abfrag {
   background-color: rgba(255, 255, 255, 0.781);
 }
-.abfrag2{
+.abfrag2 {
   background-color: rgba(226, 225, 225, 0.74);
 }
-.abfrag3{
+.abfrag3 {
   background-color: rgba(134, 126, 126, 0.664);
 }
 
-.achead{
-  background-color: rgba(220, 224, 222, 0.63);  
+.achead {
+  background-color: rgba(220, 224, 222, 0.63);
 }
 .accordion-button:not(.collapsed) {
-  color:	rgb(0, 0, 0);
-  font-weight:bold;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 .accordion-button:not(.notcollapsed) {
-background-color: rgba(220, 224, 222, 0.63);  
+  background-color: rgba(220, 224, 222, 0.63);
 
-font-size: large;
+  font-size: large;
 }
-.accordion-body{
+.accordion-body {
   font-size: large;
   font-weight: bold;
 }
-#acc{
-width: 80%;
-position:static;
-padding-bottom: 20px;
-padding-left: 15%
-}
-.cardtittle{
+#acc {
+  width: 80%;
   position: static;
-  padding-left: 16%
-  
+  padding-bottom: 20px;
+  padding-left: 15%;
 }
-.cardbottom{
-  position:relative;
+.cardtittle {
+  position: static;
+  padding-left: 16%;
+}
+.cardbottom {
+  position: relative;
   padding-left: 15%;
   margin-bottom: 1px;
   width: 80%;
   padding-top: 2px;
-  
 }
-.containerfaq{
+.containerfaq {
   position: static;
   border-radius: 2%;
-  
+
   background-color: rgba(214, 214, 203, 0.651);
   transform: translateX(20%);
   width: 70%;
-
 }
-#contdiv{
+#contdiv {
   max-width: 50%;
   margin-left: 25%;
 }
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.ourcontainer {
+  background-color: rgb(255, 255, 255);
+  border-radius: 2%;
+  width: 70%;
+  padding-left: 1%;
+  position: static;
+  margin-left: 15%;
+}
+.imgcl {
+  width: 200px;
+  height: 200px;
 }

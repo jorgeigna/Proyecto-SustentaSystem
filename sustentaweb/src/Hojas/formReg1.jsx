@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { withRouter } from "../common/with-router";
 import CheckButton from "react-validation/build/button";
-import { FormGroup, FormLabel, InputGroup, FormControl, Stack } from "react-bootstrap";
+import { FormGroup, FormLabel, InputGroup, FormControl } from "react-bootstrap";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import { isEmail, isAlpha, isMobilePhone, isNumeric } from "validator";
@@ -28,6 +28,7 @@ const email = (value) => {
     );
   }
 };
+
 const vpassword = (value) => {
   if (value.length < 6 || value.length > 40) {
     return (
@@ -115,19 +116,19 @@ class FormReg1 extends Component {
       });
     }
   }
-exrate(){
-  fetch(`https://api.exchangerate.host/latest?/source=ecb&base=${base}`)
+  exrate() {
+    fetch(`https://api.exchangerate.host/latest?/source=ecb&base=${base}`)
       .then((response) => response.json())
-      .then((data) => {   
-        auxdivisa = data.rates[convertido]
+      .then((data) => {
+        auxdivisa = data.rates[convertido];
         this.setState({
-          divisa: auxdivisa
-        })
+          divisa: auxdivisa,
+        });
       })
-        .catch((error) => {
-          console.log("Error: ", error);
+      .catch((error) => {
+        console.log("Error: ", error);
       });
-}
+  }
   componentDidMount() {
     axios
       .get("https://restcountries.com/v2/all")
@@ -138,67 +139,72 @@ exrate(){
         console.log(error);
       });
   }
-  getstates(){
+  getstates() {
     axios
-    .get(`https://api.countrystatecity.in/v1/countries/${councode}/states`, {headers: {
-      'X-CSCAPI-KEY': 'VUdFVTN4amFnV09RQ0RDUHpRN1FubFBzblhHSmZyTUtIdUNwbDNuVQ=='
-    }}
-    
-    )
-    .then((res) =>{
-      this.setState({ regions: res.data });
-      var sl = document.getElementById("stselec")
-      sl.innerHTML= "";
-      let ftopt = document.createElement("option")
-      ftopt.value =""
-      ftopt.id = ""
-      ftopt.innerHTML = "Seleccione su region/ciudad"
-      sl.appendChild(ftopt)
-      for (var i = 0; i< res.data.length; i++){
-        var opt = document.createElement("option")
-        opt.value = res.data[i].name
-        opt.id = res.data[i].iso2
-        opt.innerHTML = res.data[i].name
-        sl.appendChild(opt)
-        this.setState({
-          regfill:true
-        })
-      }
-    }).catch((error) =>{
-      console.log(error)
-    })
-
-  }
-getcities(){
-  axios
-  .get(`https://api.countrystatecity.in/v1/countries/${councode}/states/${regcode}/cities`, {headers: {
-    'X-CSCAPI-KEY': 'VUdFVTN4amFnV09RQ0RDUHpRN1FubFBzblhHSmZyTUtIdUNwbDNuVQ=='
-  }}
-  
-  )
-  .then((res) =>{
-    this.setState({ subregions: res.data });
-    var cml = document.getElementById("comsel")
-    cml.innerHTML= ""
-    let ftopt = document.createElement("option")
-    ftopt.value =""
-    ftopt.id = ""
-    ftopt.innerHTML = "Seleccione su ciudad"
-    cml.appendChild(ftopt)
-    for (var i = 0; i< res.data.length; i++){
-      var opt = document.createElement("option")
-      opt.value = res.data[i].name
-      opt.innerHTML = res.data[i].name
-      cml.appendChild(opt)
-      this.setState({
-        confill:true
+      .get(`https://api.countrystatecity.in/v1/countries/${councode}/states`, {
+        headers: {
+          "X-CSCAPI-KEY":
+            "VUdFVTN4amFnV09RQ0RDUHpRN1FubFBzblhHSmZyTUtIdUNwbDNuVQ==",
+        },
       })
-    }
-  }).catch((error) =>{
-    console.log(error)
-  })
-
-}
+      .then((res) => {
+        this.setState({ regions: res.data });
+        var sl = document.getElementById("stselec");
+        sl.innerHTML = "";
+        let ftopt = document.createElement("option");
+        ftopt.value = "";
+        ftopt.id = "";
+        ftopt.innerHTML = "Seleccione su region/ciudad";
+        sl.appendChild(ftopt);
+        for (var i = 0; i < res.data.length; i++) {
+          var opt = document.createElement("option");
+          opt.value = res.data[i].name;
+          opt.id = res.data[i].iso2;
+          opt.innerHTML = res.data[i].name;
+          sl.appendChild(opt);
+          this.setState({
+            regfill: true,
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  getcities() {
+    axios
+      .get(
+        `https://api.countrystatecity.in/v1/countries/${councode}/states/${regcode}/cities`,
+        {
+          headers: {
+            "X-CSCAPI-KEY":
+              "VUdFVTN4amFnV09RQ0RDUHpRN1FubFBzblhHSmZyTUtIdUNwbDNuVQ==",
+          },
+        }
+      )
+      .then((res) => {
+        this.setState({ subregions: res.data });
+        var cml = document.getElementById("comsel");
+        cml.innerHTML = "";
+        let ftopt = document.createElement("option");
+        ftopt.value = "";
+        ftopt.id = "";
+        ftopt.innerHTML = "Seleccione su ciudad";
+        cml.appendChild(ftopt);
+        for (var i = 0; i < res.data.length; i++) {
+          var opt = document.createElement("option");
+          opt.value = res.data[i].name;
+          opt.innerHTML = res.data[i].name;
+          cml.appendChild(opt);
+          this.setState({
+            confill: true,
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   compotro(aselec) {
     if (aselec === "otro") {
@@ -206,35 +212,33 @@ getcities(){
         arsistyle: { display: "" },
       });
     } else {
-
       this.setState({
         arsistyle: { display: "none" },
         ExtraArea: "",
-
       });
     }
   }
   compb() {
     auxTelefono = auxcdarea + auxTelefono;
     dts = {
-      Nombre : auxNombre,
-      Apellido : auxApellido, 
-      Correo : auxCorreo,
-      Contraseña : auxContraseña,
-      NombreOrganizacion : auxNombreOrganizacion,
-      Area : auxArea,
-      ExtraArea : auxExtraArea,
-      AñoForm : auxAñoForm,
-      Telefono : auxTelefono,
-      Pais : auxPais,
-      Region : auxRegion,
-      Comuna : auxComuna,
-      NFiscal : auxNFiscal,
-      MontoFact : auxMontoFact,
-      divisa : auxdivisa ,
-      PagWeb : auxPagWeb,
-      Redes : auxRedes,
-     } ;
+      Nombre: auxNombre,
+      Apellido: auxApellido,
+      Correo: auxCorreo,
+      Contraseña: auxContraseña,
+      NombreOrganizacion: auxNombreOrganizacion,
+      Area: auxArea,
+      ExtraArea: auxExtraArea,
+      AñoForm: auxAñoForm,
+      Telefono: auxTelefono,
+      Pais: auxPais,
+      Region: auxRegion,
+      Comuna: auxComuna,
+      NFiscal: auxNFiscal,
+      MontoFact: auxMontoFact,
+      divisa: auxdivisa,
+      PagWeb: auxPagWeb,
+      Redes: auxRedes,
+    };
     localStorage.setItem("data", JSON.stringify(dts));
   }
   constructor(props) {
@@ -274,8 +278,8 @@ getcities(){
       Telefono: "",
       AñoForm: "",
       NFiscal: "",
-      divisa :"",
-      valextrarea :[],
+      divisa: "",
+      valextrarea: [],
       cdarea: "+1",
       Pais: "",
       Region: "",
@@ -292,8 +296,8 @@ getcities(){
       Nconfrm: { pointerEvents: "none" },
     };
   }
-  print(){
-    console.log(councode)
+  print() {
+    console.log(councode);
   }
 
   onChangeNombre(e) {
@@ -374,13 +378,12 @@ getcities(){
       this.setState({
         Region: e.target.value,
         regfill: true,
-      })
-      this.authclik()
+      });
+      this.authclik();
       const index = e.target.selectedIndex;
-      const el = e.target.childNodes[index]
-      regcode = el.getAttribute('id'); 
+      const el = e.target.childNodes[index];
+      regcode = el.getAttribute("id");
       this.getcities();
-      ;
     } else {
       auxRegion = "";
       this.setState({
@@ -420,8 +423,8 @@ getcities(){
       for (let i = 0; i < this.state.countries.length; i++) {
         if (this.state.countries[i].name === auxPais) {
           auxcdarea = "+" + this.state.countries[i].callingCodes[0];
-          base = this.state.countries[i].currencies[0].code
-          councode = this.state.countries[i].alpha2Code
+          base = this.state.countries[i].currencies[0].code;
+          councode = this.state.countries[i].alpha2Code;
           break;
         }
       }
@@ -445,12 +448,12 @@ getcities(){
   handleButton(e) {
     e.preventDefault();
     this.form.validateAll();
-    this.compb()
+    this.compb();
     this.setState({
       loading: true,
     });
     if (this.checkBtn.context._errors.length === 0) {
-        this.props.router.navigate("/registro/pag2");
+      this.props.router.navigate("/registro/pag2");
     }
   }
   render() {
@@ -646,13 +649,13 @@ getcities(){
                     <select
                       name="regiones"
                       id="stselec"
-                      disabled ={!this.state.regfill}
+                      disabled={!this.state.regfill}
                       className="form-select"
                       onChange={(e) => {
                         this.onChangeRegion(e);
                       }}
-                    > 
-                    <option value="">Seleccione su estado/regiob</option>
+                    >
+                      <option value="">Seleccione su estado/regiob</option>
                     </select>
                   </FormGroup>
                   <FormGroup as={Col}>
@@ -660,13 +663,13 @@ getcities(){
                     <select
                       name="comunas"
                       id="comsel"
-                      disabled ={!this.state.confill}
+                      disabled={!this.state.confill}
                       className="form-select"
                       onChange={(e) => {
                         this.onChangeComuna(e);
                       }}
-                    > 
-                    <option value="">Seleccione su ciudad/comuna</option>
+                    >
+                      <option value="">Seleccione su ciudad/comuna</option>
                     </select>
                   </FormGroup>
                 </Row>
@@ -700,12 +703,11 @@ getcities(){
                   onChange={this.onChangeRedes}
                 />
               </div>
-<input type="button" onClick={this.getstates} />
               <CheckButton
                 className="w-100 mt-3 btn btn-lg btn-block btn-light "
                 disabled={this.state.IsAllComplete}
                 style={this.state.Nconfrm}
-                ref={c => {
+                ref={(c) => {
                   this.checkBtn = c;
                 }}
               >

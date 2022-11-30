@@ -80,7 +80,7 @@ class AuthService {
       Lvl,
     });
   }
-  registresp(    
+  registresp(
     Correo,
     resp1,
     resp2,
@@ -114,10 +114,11 @@ class AuthService {
     return JSON.parse(localStorage.getItem("user"));
   }
 
-sendmail(mensaje){
-return axios.post(API_URL + "ems",{
-  mensaje
-})
+  sendmail(mensaje) {
+    return axios.post(API_URL + "ems", {
+      mensaje,
+    });
+  }
 }
-}
+
 export default new AuthService();

@@ -1,9 +1,8 @@
 import React, { Component, Fragment } from "react";
 import AuthService from "../Services/auth.service";
-import { withRouter } from '../common/with-router';
+import { withRouter } from "../common/with-router";
 
 import Form from "react-bootstrap/Form";
-import { Link } from "react-router-dom";
 var resp1 = 0;
 var resp2 = 0;
 var resp3 = 0;
@@ -38,18 +37,14 @@ class Regencu extends Component {
     this.regusuario = this.regusuario.bind(this);
     this.regcararact = this.regcararact.bind(this);
     this.regresp = this.regresp.bind(this);
-    this.test = this.test.bind(this);
     this.state = {
       encompl: false,
       linklav: { pointerEvents: "none" },
-      successful: {display:"none"},
+      successful: { display: "none" },
       message: "",
     };
   }
-test(e){
-  e.preventDefault();
-  console.log("this is a test")
-}
+
   calcPnt() {
     let rp1as = [0, 33, 66, 100];
     let rp2as = [0, 33, 66, 100];
@@ -98,17 +93,16 @@ test(e){
   regusuario() {
     this.calcPnt();
     this.calcLV();
-    //this.setdt();
+    this.setdt();
 
     let dat = JSON.parse(localStorage.getItem("data"));
 
     this.setState({
       message: "",
-      successful: {display:"none"},
+      successful: { display: "none" },
     });
     AuthService.register(dat.Nombre, dat.Correo, dat.Contraseña).then(
       (response) => {
-
         this.regcararact();
       },
       (error) => {
@@ -120,7 +114,7 @@ test(e){
           error.toString();
         console.log(resMessage);
         this.setState({
-          successful: {display:""},
+          successful: { display: "" },
           message: resMessage,
         });
       }
@@ -131,7 +125,7 @@ test(e){
 
     this.setState({
       message: "",
-      successful: {display:"none"},
+      successful: { display: "none" },
     });
     AuthService.registercarac(
       dat.Correo,
@@ -144,7 +138,7 @@ test(e){
       dat.Pais,
       dat.Region,
       dat.Comuna,
-      parseInt( dat.NFiscal),
+      parseInt(dat.NFiscal),
       parseInt(dat.MontoFact),
       parseFloat(dat.divisa),
       dat.PagWeb,
@@ -162,9 +156,7 @@ test(e){
       dat.Lvl
     ).then(
       (response) => {
-
         this.regresp();
-
       },
       (error) => {
         const resMessage =
@@ -175,7 +167,7 @@ test(e){
           error.toString();
         console.log(resMessage);
         this.setState({
-          successful: {display:""},
+          successful: { display: "" },
           message: resMessage,
         });
       }
@@ -203,7 +195,7 @@ test(e){
       (response) => {
         this.props.router.navigate("/registro/resu");
         window.location.reload();
-      localStorage.setItem("lvl",Lvl)
+        localStorage.setItem("lvl", Lvl);
       },
       (error) => {
         const resMessage =
@@ -214,17 +206,15 @@ test(e){
           error.toString();
         console.log(resMessage);
         this.setState({
-          successful: {display:""},
+          successful: { display: "" },
           message: resMessage,
-
         });
       }
     );
   }
   buttonHandler(e) {
     e.preventDefault();
-   this.regusuario();
-
+    this.regusuario();
   }
   authclick() {
     if (
@@ -335,25 +325,25 @@ test(e){
               </p>
               <input type="radio" name="resp2" id="rp1p2" value={0} />
               <label htmlFor="rp1p2">
-                &nbsp;respuesta 1 de la preguna numero 2
+                &nbsp;no conozco nada de economia circular
               </label>
               <br></br>
 
               <input type="radio" name="resp2" id="rp2p2" value={1} />
               <label htmlFor="rp2p2">
-                &nbsp;respuesta 2 de la preguna numero 2
+                &nbsp;he escuchado sobre economia circular pero no lo domino
               </label>
               <br></br>
 
               <input type="radio" name="resp2" id={2} value={2} />
               <label htmlFor="rp3p2">
-                &nbsp;respuesta 3 de la preguna numero 2
+                &nbsp;conozco que es la economia circular y planeo integrarla a mi empresa
               </label>
               <br></br>
 
               <input type="radio" name="resp2" id="rp4p2" value={3} />
               <label htmlFor="rp4p2">
-                &nbsp;respuesta 4 de la preguna numero 2
+                &nbsp;conozco la economia circular y tengo metas establecidas a cumplir
               </label>
               <br />
               <br />
@@ -364,25 +354,25 @@ test(e){
               </p>
               <input type="radio" name="resp3" id="rp1p3" value={0} />
               <label htmlFor="rp1p3">
-                &nbsp;respuesta 1 de la preguna numero 3
+                &nbsp;no tengo planes ambientales de aqui al 2030
               </label>
               <br></br>
 
               <input type="radio" name="resp3" id="rp2p3" value={1} />
               <label htmlFor="rp2p3">
-                &nbsp;respuesta 2 de la preguna numero 3
+                &nbsp;estoy planteando metas ambientales de aqui al 2030
               </label>
               <br></br>
 
               <input type="radio" name="resp3" id="rp3p3" value={2} />
               <label htmlFor="rp3p3">
-                &nbsp;respuesta 3 de la preguna numero 3
+                &nbsp;tengo metas propias establecidas de aqui al 2030
               </label>
               <br></br>
 
               <input type="radio" name="resp3" id="rp4p3" value={3} />
               <label htmlFor="rp4p3">
-                &nbsp;respuesta 4 de la preguna numero 3
+                &nbsp;tengo metas propias y requerimientos de certificados que cumplir de aqui al 2030
               </label>
             </div>
             <br />
@@ -439,7 +429,7 @@ test(e){
             </div>
             <div onChange={this.onChangerp6}>
               <br />
-              <p style={{ fontWeight: "bolder" }}>pregunta 6</p>
+              <p style={{ fontWeight: "bolder" }}>¿?</p>
               <input type="radio" name="resp6" id="rp1p6" value={0} />
               <label htmlFor="rp1p6">
                 &nbsp;respuesta 1 de la preguna numero 6
@@ -465,7 +455,7 @@ test(e){
             </div>
             <div onChange={this.onChangerp7}>
               <br />
-              <p style={{ fontWeight: "bolder" }}>pregunta 7</p>
+              <p style={{ fontWeight: "bolder" }}>¿?</p>
               <input type="radio" name="resp7" id="rp1p7" value={0} />
               <label htmlFor="rp1p7">
                 &nbsp;respuesta 1 de la preguna numero 7
@@ -491,7 +481,7 @@ test(e){
             </div>
             <div onChange={this.onChangerp8}>
               <br />
-              <p style={{ fontWeight: "bolder" }}>pregunta 8</p>
+              <p style={{ fontWeight: "bolder" }}>¿?</p>
               <input type="radio" name="resp8" id="rp1p8" value={0} />
               <label htmlFor="rp1p8">
                 &nbsp;respuesta 1 de la preguna numero 8
@@ -517,7 +507,7 @@ test(e){
             </div>
             <div onChange={this.onChangerp9}>
               <br />
-              <p style={{ fontWeight: "bolder" }}>pregunta 9</p>
+              <p style={{ fontWeight: "bolder" }}>¿?</p>
               <input type="radio" name="resp9" id="rp1p9" value={0} />
               <label htmlFor="rp1p9">
                 &nbsp;respuesta 1 de la preguna numero 9
@@ -543,7 +533,7 @@ test(e){
             </div>
             <div onChange={this.onChangerp10}>
               <br />
-              <p style={{ fontWeight: "bolder" }}>pregunta 10</p>
+              <p style={{ fontWeight: "bolder" }}>¿?</p>
               <input type="radio" name="resp10" id="rp1p10" value={0} />
               <label htmlFor="rp1p10">
                 &nbsp;respuesta 1 de la preguna numero 10
@@ -569,18 +559,23 @@ test(e){
               <br />
               <br />
             </div>
-            <input type="button" style={{ width: "80%", marginLeft: "5%", marginTop: "10px" }} className="btn btn-lg btn-block btn-light" onClick={this.buttonHandler} value="probar registro" disabled ={ !this.state.encompl} />
+            <input
+              type="button"
+              style={{ width: "80%", marginLeft: "5%", marginTop: "10px" }}
+              className="btn btn-lg btn-block btn-light"
+              onClick={this.buttonHandler}
+              value="Continuar"
+              disabled={!this.state.encompl}
+            />
             <div className="form-group">
-                <div
+              <div
                 style={this.state.successful}
-                  className={
-                     "alert alert-danger"
-                  }
-                  role="alert"
-                >
-                  {this.state.message}
-                </div>
-              </div> 
+                className={"alert alert-danger"}
+                role="alert"
+              >
+                {this.state.message}
+              </div>
+            </div>
           </Form>
         </section>
       </Fragment>
