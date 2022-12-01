@@ -80,10 +80,10 @@ body {
 }
 /* css encargado del formato de la encuesta*/
 #Emcuesta {
-  width: 40%;
+  width: 55%;
   color: rgb(0, 0, 0);
   background: rgba(211, 211, 211, 0.842);
-  transform: translateX(70%);
+  transform: translateX(45%);
   position: static;
   border-radius: 2%;
   padding: 20px;

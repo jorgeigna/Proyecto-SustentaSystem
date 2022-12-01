@@ -296,51 +296,51 @@ class Regencu extends Component {
           <Form>
             <h1>Encuesta de Conocimiento y Nivelación</h1>
             <h5>
-              para conocer que producto necesita solicitamos completar esta
+              Para conocer que producto necesita solicitamos completar esta
               encuesta, solicitamos completar con sinceridad para determinar
               correctamente que nivel de conocimiento posee sobre la
-              sustentabilidad
+              sustentabilidad.
             </h5>
-            <p style={{ fontWeight: "bolder" }}>¿Conoce que es un ODS?</p>
+            <p style={{ fontWeight: "bolder" }}>¿Conoce qué es un ODS?</p>
             <div onChange={this.onChangerp1}>
               <input type="radio" name="resp1" id="rp1p1" value={0} />
-              <label htmlFor="rp1p1">&nbsp;no conozco que es</label>
+              <label htmlFor="rp1p1">&nbsp;No conozco que es</label>
               <br />
               <input type="radio" name="resp1" id="rp2p1" value={1} />
-              <label htmlFor="rp2p1">&nbsp;conozoco que es</label>
+              <label htmlFor="rp2p1">&nbsp;Conozoco que es</label>
               <br />
               <input type="radio" name="resp1" id="rp3p1" value={2} />
               <label htmlFor="rp3p1">
-                &nbsp;conozco que es y tengo planes de implementarla
+                &nbsp;Conozco que es y tengo planes de implementarla
               </label>
               <br></br>
               <input type="radio" name="resp1" id="rp4p1" value={3} />
               <label htmlFor="rp4p1">
                 {" "}
-                &nbsp;conozco que es y se estan implementando en la empresa
+                &nbsp;Conozco que es y se estan implementando en la empresa
               </label>
               <br />
               <br />
             </div>
             <div onChange={this.onChangerp2}>
               <p style={{ fontWeight: "bolder" }}>
-                ¿conoce que es la economia circular?
+                ¿Conoce que es la economia circular?
               </p>
               <input type="radio" name="resp2" id="rp1p2" value={0} />
               <label htmlFor="rp1p2">
-                &nbsp;no conozco nada de economia circular
+                &nbsp;No conozco nada de economia circular
               </label>
               <br></br>
 
               <input type="radio" name="resp2" id="rp2p2" value={1} />
               <label htmlFor="rp2p2">
-                &nbsp;he escuchado sobre economia circular pero no lo domino
+                &nbsp;He escuchado sobre economia circular pero no lo domino
               </label>
               <br></br>
 
               <input type="radio" name="resp2" id={2} value={2} />
               <label htmlFor="rp3p2">
-                &nbsp;conozco que es la economia circular y planeo integrarla a
+                &nbsp;Conozco que es la economia circular y planeo integrarla a
                 mi empresa
               </label>
               <br></br>
@@ -383,191 +383,192 @@ class Regencu extends Component {
             </div>
             <br />
             <div onChange={this.onChangerp4}>
-              <p style={{ fontWeight: "bolder" }}>¿?</p>
+              <p style={{ fontWeight: "bolder" }}>¿Posee o aborda aspectos como: propósito del negocio, valores, transparencia, código de ética y reportabilidad?</p>
               <input type="radio" name="resp4" id="rp1p4" value={0} />
               <label htmlFor="rp1p4">
-                &nbsp;respuesta 1 de la preguna numero 4
+                &nbsp;No se posee ni se aborda los aspectos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp4" id="rp2p4" value={1} />
               <label htmlFor="rp2p4">
-                &nbsp;respuesta 2 de la preguna numero 4
+                &nbsp;Se cree poseer o abordar uno de los aspectos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp4" id="rp3p4" value={2} />
               <label htmlFor="rp3p4">
-                &nbsp;respuesta 3 de la preguna numero 4
+                &nbsp;Se poseen o abordan algunos de los aspectos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp4" id="rp4p4" value={3} />
               <label htmlFor="rp4p4">
-                &nbsp;respuesta 4 de la preguna numero 4
+                &nbsp;Se poseen o abordan todos los aspectos mencionados
               </label>
             </div>
             <div onChange={this.onChangerp5}>
               <br />
-              <p style={{ fontWeight: "bolder" }}>¿?</p>
+              <p style={{ fontWeight: "bolder" }}>¿Posee o aborda aspectos como cumplimiento de normativa legal, práctica de seguridad y salud en el trabajo, oportunidades de capacitación, entre otros?</p>
               <input type="radio" name="resp5" id="rp1p5" value={0} />
               <label htmlFor="rp1p5">
-                &nbsp;respuesta 1 de la preguna numero 5
+                &nbsp;No se posee ni se aborda los aspectos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp5" id="rp2p5" value={1} />
               <label htmlFor="rp2p5">
-                &nbsp;respuesta 2 de la preguna numero 5
+                &nbsp;Se cree poseer o abordar uno de los aspectos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp5" id="rp3p5" value={2} />
               <label htmlFor="rp3p5">
-                &nbsp;respuesta 3 de la preguna numero 5
+                &nbsp;Se poseen o abordan algunos de los aspectos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp5" id="rp4p5" value={3} />
               <label htmlFor="rp4p5">
-                &nbsp;respuesta 4 de la preguna numero 5
+                &nbsp;Se poseen o abordan todos los aspectos mencionados
               </label>
             </div>
             <div onChange={this.onChangerp6}>
               <br />
-              <p style={{ fontWeight: "bolder" }}>¿?</p>
+              <p style={{ fontWeight: "bolder" }}>¿Identifica un conjunto de estrategias para crear un menor impacto medio ambiental en relación a plan de gestión ambiental, energía consumida, registro de gases de efecto invernadero, clasificación de residuos, entre otros?</p>
               <input type="radio" name="resp6" id="rp1p6" value={0} />
               <label htmlFor="rp1p6">
-                &nbsp;respuesta 1 de la preguna numero 6
+                &nbsp;No se posee ni se aborda los aspectos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp6" id="rp2p6" value={1} />
               <label htmlFor="rp2p6">
-                &nbsp;respuesta 2 de la preguna numero 6
+                &nbsp;Se cree poseer o abordar uno de los aspectos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp6" id="rp3p6" value={2} />
               <label htmlFor="rp3p6">
-                &nbsp;respuesta 3 de la preguna numero 6
+                &nbsp;Se poseen o abordan algunos de los aspectos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp6" id="rp4p6" value={3} />
               <label htmlFor="rp4p6">
-                &nbsp;respuesta 4 de la preguna numero 6
+                &nbsp;Se poseen o abordan todos los aspectos mencionados
               </label>
             </div>
             <div onChange={this.onChangerp7}>
               <br />
-              <p style={{ fontWeight: "bolder" }}>¿?</p>
+              <p style={{ fontWeight: "bolder" }}>¿Se amplia información a través de monitoreos sobre los materiales que no forman parte del producto final relacionados con el proceso de fabricación y/o transformación?</p>
               <input type="radio" name="resp7" id="rp1p7" value={0} />
               <label htmlFor="rp1p7">
-                &nbsp;respuesta 1 de la preguna numero 7
+                &nbsp;No se realiza ampliación de información o monitoreo a los materiales mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp7" id="rp2p7" value={1} />
               <label htmlFor="rp2p7">
-                &nbsp;respuesta 2 de la preguna numero 7
+                &nbsp;Se cree realizar al menos un monitoreo relacionado
               </label>
               <br></br>
 
               <input type="radio" name="resp7" id="rp3p7" value={2} />
               <label htmlFor="rp3p7">
-                &nbsp;respuesta 3 de la preguna numero 7
+                &nbsp;Se realizan algunos monitoreos
               </label>
               <br></br>
 
               <input type="radio" name="resp7" id="rp4p7" value={3} />
               <label htmlFor="rp4p7">
-                &nbsp;respuesta 4 de la preguna numero 7
+                &nbsp;Se realizan monitoreos correspondientes
               </label>
             </div>
             <div onChange={this.onChangerp8}>
               <br />
-              <p style={{ fontWeight: "bolder" }}>¿?</p>
+              <p style={{ fontWeight: "bolder" }}>¿Reconoce la forma en que la organización genera y promueve entornos inclusivos en proveedores, politicas, trabajadores y comunidades?</p>
               <input type="radio" name="resp8" id="rp1p8" value={0} />
               <label htmlFor="rp1p8">
-                &nbsp;respuesta 1 de la preguna numero 8
+                &nbsp;No se generan ni se promueven los entornos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp8" id="rp2p8" value={1} />
               <label htmlFor="rp2p8">
-                &nbsp;respuesta 2 de la preguna numero 8
+                &nbsp;Se cree generar y promover al menos uno de los entornos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp8" id="rp3p8" value={2} />
               <label htmlFor="rp3p8">
-                &nbsp;respuesta 3 de la preguna numero 8
+                &nbsp;Se generan y promueven en algunos de los entornos mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp8" id="rp4p8" value={3} />
               <label htmlFor="rp4p8">
-                &nbsp;respuesta 4 de la preguna numero 8
+                &nbsp;Se generan y promueven en todos los entornos mencionados
               </label>
             </div>
             <div onChange={this.onChangerp9}>
               <br />
-              <p style={{ fontWeight: "bolder" }}>¿?</p>
+              <p style={{ fontWeight: "bolder" }}>¿Se ofrece revisión de los procesos y estrategias de las empresas para realizar modelos de negocios rentables y a la vez sostenibles para las personas y el planeta?</p>
               <input type="radio" name="resp9" id="rp1p9" value={0} />
               <label htmlFor="rp1p9">
-                &nbsp;respuesta 1 de la preguna numero 9
+                &nbsp;No se ofrecen revisiones de los procesos ni estrategias mencionadas
               </label>
               <br></br>
 
               <input type="radio" name="resp9" id="rp2p9" value={1} />
               <label htmlFor="rp2p9">
-                &nbsp;respuesta 2 de la preguna numero 9
+                &nbsp;Se cree ofrecer revisiones de los procesos y estrategias mencionadas
               </label>
               <br></br>
 
               <input type="radio" name="resp9" id="rp3p9" value={2} />
               <label htmlFor="rp3p9">
-                &nbsp;respuesta 3 de la preguna numero 9
+                &nbsp;Se ofrecen algunas revisiones de los procesos y estrategias mencionadas
               </label>
               <br></br>
 
               <input type="radio" name="resp9" id="rp4p9" value={3} />
               <label htmlFor="rp4p9">
-                &nbsp;respuesta 4 de la preguna numero 9
+                &nbsp;Se ofrecen todas las revisiones mencionadas
               </label>
             </div>
             <div onChange={this.onChangerp10}>
               <br />
-              <p style={{ fontWeight: "bolder" }}>¿?</p>
+              <p style={{ fontWeight: "bolder" }}>¿Comunican a través de informes, comunicados, registros emisiones u otros medios su desempeño en términos ambientales, sociales y financieros?</p>
               <input type="radio" name="resp10" id="rp1p10" value={0} />
               <label htmlFor="rp1p10">
-                &nbsp;respuesta 1 de la preguna numero 10
+                &nbsp;No se comunican los desempeños en tales términos
               </label>
               <br></br>
 
               <input type="radio" name="resp10" id="rp2p10" value={1} />
               <label htmlFor="rp2p10">
-                &nbsp;respuesta 2 de la preguna numero 10
+                &nbsp;Se cree comunicar el desempeño al menos uno de los mencionados
               </label>
               <br></br>
 
               <input type="radio" name="resp10" id="rp3p10" value={2} />
               <label htmlFor="rp3p10">
-                &nbsp;respuesta 3 de la preguna numero 10
+                &nbsp;Se comunica el desempeño en más de uno de los mencionados
+
               </label>
               <br></br>
 
               <input type="radio" name="resp10" id="rp4p10" value={3} />
               <label htmlFor="rp4p10">
-                &nbsp;respuesta 4 de la preguna numero 10
+                &nbsp;Se comunica el desempeño en todos los términos mencionados
               </label>
               <br />
               <br />
             </div>
             <input
               type="button"
-              style={{ width: "80%", marginLeft: "5%", marginTop: "10px" }}
+              style={{ width: "90%", marginLeft: "5%", marginTop: "10px" }}
               className="btn btn-lg btn-block btn-light"
               onClick={this.buttonHandler}
               value="Continuar"
