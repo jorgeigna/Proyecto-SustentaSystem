@@ -9,7 +9,9 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import { isEmail, isAlpha, isMobilePhone, isNumeric } from "validator";
 import axios from "axios";
+/*pagina uno del registro de usuarios*/
 const required = (value) => {
+  // funcion que verifica si se ha rellenaodo un input obligatorio
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -20,6 +22,7 @@ const required = (value) => {
 };
 
 const email = (value) => {
+  //funcion que verifica si un correo posee un formato valido
   if (!isEmail(value)) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -30,6 +33,7 @@ const email = (value) => {
 };
 
 const vpassword = (value) => {
+  //funcion que verifica que el correo posea un largo minimo y maximo estableciodo
   if (value.length < 6 || value.length > 40) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -39,6 +43,7 @@ const vpassword = (value) => {
   }
 };
 const isnumber = (value) => {
+  //funcion que verifica si el texto ingresado es un numero
   if (!isNumeric(value)) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -49,6 +54,7 @@ const isnumber = (value) => {
 };
 
 const notnumber = (value) => {
+  //funcion encargada de verificar que el texto no contenga numeros
   if (!isAlpha(value)) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -58,6 +64,7 @@ const notnumber = (value) => {
   }
 };
 const estelefono = (value) => {
+  //funcion encargada de verificar que un numero sea un numero telefonico con el largo adecuado de 8 caracteres
   if (!isMobilePhone(value)) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -66,6 +73,7 @@ const estelefono = (value) => {
     );
   }
 };
+//declaracion de variables que se utilizaran en las funciones de la pagina
 var auxNombre = "";
 var auxApellido = "";
 var auxCorreo = "";
@@ -91,6 +99,7 @@ var councode = "";
 var regcode = "";
 class FormReg1 extends Component {
   authclik() {
+    //funcion encargada de verificar que los datos obligatorios esten rellenados para habilitar el boton de continuar
     if (
       auxRegion &&
       auxComuna &&
@@ -117,6 +126,7 @@ class FormReg1 extends Component {
     }
   }
   exrate() {
+    //funcion encargada de obtener las divisas en base al pais ingresado
     fetch(`https://api.exchangerate.host/latest?/source=ecb&base=${base}`)
       .then((response) => response.json())
       .then((data) => {
@@ -130,6 +140,7 @@ class FormReg1 extends Component {
       });
   }
   componentDidMount() {
+    //funcion encargada de obtener los paises del mundo para ingresalos en el input de paises
     axios
       .get("https://restcountries.com/v2/all")
       .then((res) => {
@@ -140,6 +151,7 @@ class FormReg1 extends Component {
       });
   }
   getstates() {
+    //funcion encargada de obtener las regiones o estados en base al pais ingresado para ingresarlos en el input de estados
     axios
       .get(`https://api.countrystatecity.in/v1/countries/${councode}/states`, {
         headers: {
@@ -171,6 +183,7 @@ class FormReg1 extends Component {
         console.log(error);
       });
   }
+  //funcion encargada de obtener las ciudades o comunas en base al pais y  estado ingresados para ingresarlos en el input de ciudades
   getcities() {
     axios
       .get(
@@ -207,6 +220,7 @@ class FormReg1 extends Component {
   }
 
   compotro(aselec) {
+    //funcion encargada de comprobar si se selecciono otro en el apartado area
     if (aselec === "otro") {
       this.setState({
         arsistyle: { display: "" },
@@ -219,7 +233,9 @@ class FormReg1 extends Component {
     }
   }
   compb() {
+    //funcion encargada de guardar los datos en localhost para usarlos en el registro
     auxTelefono = auxcdarea + auxTelefono;
+    auxMontoFact = auxMontoFact * auxdivisa;
     dts = {
       Nombre: auxNombre,
       Apellido: auxApellido,
@@ -262,7 +278,6 @@ class FormReg1 extends Component {
     this.onChangePagWeb = this.onChangePagWeb.bind(this);
     this.onChangeRedes = this.onChangeRedes.bind(this);
     this.onChangeExtraArea = this.onChangeExtraArea.bind(this);
-    this.print = this.print.bind(this);
     this.exrate = this.exrate.bind(this);
     this.getstates = this.getstates.bind(this);
     this.state = {
@@ -296,10 +311,8 @@ class FormReg1 extends Component {
       Nconfrm: { pointerEvents: "none" },
     };
   }
-  print() {
-    console.log(councode);
-  }
 
+  //funciones que guardan los datos y obtienen los valores dinamicos al ingresar rellenar la encuasta
   onChangeNombre(e) {
     auxNombre = e.target.value;
     this.setState({
@@ -446,6 +459,7 @@ class FormReg1 extends Component {
     }
   }
   handleButton(e) {
+    //funcion que confirma el ingreso de datos, guarda los datos y refresca la pagina al dar clic en continuar
     e.preventDefault();
     this.form.validateAll();
     this.compb();

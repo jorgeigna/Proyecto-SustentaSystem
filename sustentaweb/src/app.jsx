@@ -18,6 +18,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import initFontAwesome from "../src/common/initFontAwesome";
+/*pagina app que carga las paginas y contiene las partes basicas que comparten todas las paginas */
+//llamado del inicio de las librerias fontawesome
 initFontAwesome();
 export default class App extends Component {
   constructor(props) {
@@ -29,6 +31,7 @@ export default class App extends Component {
     };
   }
   componentDidMount() {
+    //funcion que obtiene la sesion actual si existe para cambiar el usuario activo y hablitar la pestaña de encuestas
     const user = AuthService.getCurrentUser();
 
     if (user) {
@@ -42,9 +45,12 @@ export default class App extends Component {
     });
   }
   componentWillUnmount() {
+    //funcion encargada de quitar al usuario activo al salir de la pagina
     EventBus.remove("logout");
   }
   logOut() {
+    //funcion de cierre de sesion
+
     AuthService.logout();
     this.setState({
       currentUser: undefined,
@@ -55,79 +61,79 @@ export default class App extends Component {
 
     return (
       <Fragment>
-        <div className="min-vh-100 d-flex flex-column 
-                justify-content-between">
-        <header>
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <Navbar.Brand>
-                <Link className="nav-link" to="/">
-                  SustentaWeb
-                </Link>
-              </Navbar.Brand>
-              <Nav className="me-auto">
-                <Nav.Link>
+        <div
+          className="min-vh-100 d-flex flex-column 
+                justify-content-between"
+        >
+          <header>
+            <Navbar bg="dark" variant="dark">
+              <Container>
+                <Navbar.Brand>
                   <Link className="nav-link" to="/">
-                    Home
+                    SustentaWeb
                   </Link>
-                </Nav.Link>
-                {currentUser ? (
-                <Nav.Link>
-                  <Link className="nav-link" to="/encuest">
-                    Encuestas
-                  </Link>
-                </Nav.Link>
-                ): (
-                  <Nav>
+                </Navbar.Brand>
+                <Nav className="me-auto">
+                  <Nav.Link>
+                    <Link className="nav-link" to="/">
+                      Home
+                    </Link>
+                  </Nav.Link>
+                  {currentUser ? (
+                    <Nav.Link>
+                      <Link className="nav-link" to="/encuest">
+                        Encuestas
+                      </Link>
+                    </Nav.Link>
+                  ) : (
+                    <Nav></Nav>
+                  )}
+                  <Nav.Link>
+                    <Link className="nav-link" to="/about">
+                      Sobre Nosotros
+                    </Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link className="nav-link" to="/faq">
+                      FAQ
+                    </Link>
+                  </Nav.Link>
+                </Nav>
 
+                {currentUser ? (
+                  <Nav>
+                    <Nav.Link className="nav-link">
+                      <Link className="nav-link">{currentUser.username}</Link>
+                    </Nav.Link>
+                    <Nav.Link eventKey={2}>
+                      <Link to="/" onClick={this.logOut} className="nav-link">
+                        LogOut
+                      </Link>
+                    </Nav.Link>
+                  </Nav>
+                ) : (
+                  <Nav>
+                    <Nav.Link eventKey={2}>
+                      <Link to={"/login"} className="nav-link">
+                        Login
+                      </Link>
+                    </Nav.Link>
                   </Nav>
                 )}
-                <Nav.Link>
-                  <Link className="nav-link" to="/about">
-                    Sobre Nosotros
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link className="nav-link" to="/faq">
-                    FAQ
-                  </Link>
-                </Nav.Link>
-              </Nav>
-
-              {currentUser ? (
-                <Nav>
-                  <Nav.Link className="nav-link">
-                    <Link className="nav-link">{currentUser.username}</Link>
-                  </Nav.Link>
-                  <Nav.Link eventKey={2}>
-                    <Link to="/" onClick={this.logOut} className="nav-link">
-                      LogOut
-                    </Link>
-                  </Nav.Link>
-                </Nav>
-              ) : (
-                <Nav>
-                  <Nav.Link eventKey={2}>
-                    <Link to={"/login"} className="nav-link">
-                      Login
-                    </Link>
-                  </Nav.Link>
-                </Nav>
-              )}
-            </Container>
-          </Navbar>
-        </header>
-        <Routes>
-          <Route path="/" exact element={<Homep />} />
-          <Route path="/login" element={<Logp />} />
-          <Route path="/registro/pag1" element={<FormReg1 />} />
-          <Route path="/registro/pag2" element={<Formreg2 />} />
-          <Route path="/registro/enc" element={<Regencu />} />
-          <Route path="/registro/resu" element={<Resultado />} />
-          <Route path="/encuest" element={<Encuestas />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/faq" element={<Faq />} />
-        </Routes>
+              </Container>
+            </Navbar>
+          </header>
+          <Routes>
+            <Route path="/" exact element={<Homep />} />
+            <Route path="/login" element={<Logp />} />
+            <Route path="/registro/pag1" element={<FormReg1 />} />
+            <Route path="/registro/pag2" element={<Formreg2 />} />
+            <Route path="/registro/enc" element={<Regencu />} />
+            <Route path="/registro/resu" element={<Resultado />} />
+            <Route path="/encuest" element={<Encuestas />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/faq" element={<Faq />} />
+          </Routes>
           <footer className="bg-dark text-center text-white" id="footermain">
             <div className="navbar-fixed-bottom">
               <section className="mb-4">
@@ -198,12 +204,17 @@ export default class App extends Component {
               style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
             >
               Kairos coash © 2021:
-              <a className="text-white" href="http://kairosgestionintegral.com/" rel="noreferrer" target={"_blank"}>
+              <a
+                className="text-white"
+                href="http://kairosgestionintegral.com/"
+                rel="noreferrer"
+                target={"_blank"}
+              >
                 kairosgestionintegral.com
               </a>
             </div>
           </footer>
-          </div>
+        </div>
       </Fragment>
     );
   }

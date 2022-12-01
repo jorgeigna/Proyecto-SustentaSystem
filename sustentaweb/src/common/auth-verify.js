@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { withRouter } from "./with-router";
-
+/*componente encargado de la verificacion de usuario mediante jwt*/
 const parseJwt = (token) => {
   try {
-    return JSON.parse(atob(token.split('.')[1]));
+    return JSON.parse(atob(token.split(".")[1]));
   } catch (e) {
     return null;
   }

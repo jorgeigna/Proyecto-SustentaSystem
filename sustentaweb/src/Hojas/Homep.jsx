@@ -5,6 +5,7 @@ import secondimage from "../images/slide2.jpg";
 import companyimage from "../images/companyplaceholder.jpg";
 import thirdunage from "../images/slide3.png";
 class Homep extends Component {
+  /*pagina home de la aplicacion */
   render() {
     return (
       <Fragment>

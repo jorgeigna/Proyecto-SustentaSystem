@@ -16,6 +16,7 @@ import im13 from "../images/im12.png";
 import im12 from "../images/im13.png";
 import im14 from "../images/im14.png";
 export default class About extends Component {
+  /*pagina sobre nosotros de la aplicacion*/
   render() {
     return (
       <Fragment>
@@ -128,7 +129,7 @@ export default class About extends Component {
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
-                      <a href="/#"className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />
                       </a>
                     </li>
@@ -175,7 +176,7 @@ export default class About extends Component {
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="/#"className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "instagram"]} />
                       </a>
                     </li>
@@ -313,7 +314,7 @@ export default class About extends Component {
                     CEO - Founder
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
-                    <li  className="list-inline-item">
+                    <li className="list-inline-item">
                       <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
                       </a>
@@ -542,7 +543,7 @@ export default class About extends Component {
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="/#"className="social-link">
+                      <a href="/#" className="social-link">
                         <FontAwesomeIcon icon={["fab", "twitter"]} />
                       </a>
                     </li>

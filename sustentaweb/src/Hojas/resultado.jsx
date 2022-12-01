@@ -9,6 +9,7 @@ import AuthService from "../Services/auth.service";
 
 export default class Resultado extends Component {
   componentDidMount() {
+    //funcion que obtioene los datos de correo y usuario para mostrar al cliente su nivel, si es 0 se envia un correo a kairos para realizar una capaciotacion al usuario
     var desimg = JSON.parse(localStorage.getItem("lvl"));
     var textc = document.getElementById("compl");
     var imgc = document.getElementById("contdiv");
@@ -19,8 +20,8 @@ export default class Resultado extends Component {
       imgl.alt = "nivel1";
       imgc.appendChild(imgl);
       const texth = document.createElement("h5");
-      localStorage.removeItem("lvl")
-      localStorage.removeItem("data")
+      localStorage.removeItem("lvl");
+      localStorage.removeItem("data");
 
       texth.innerHTML =
         "encontramos que su nivel es suficiente para empezar la construccion de medidas para su empreas, por lo que lo invitamos a contestar las encuestas de nivel uno que se han habilitado para usted, a medida que se avance con las medidas avanzaremos en la creacion de politicas a su medida";
@@ -35,8 +36,8 @@ export default class Resultado extends Component {
       texth.innerHTML =
         "encontramos que su nivel es adecuado para definir los ODS y plantear la politica sustentable que llevara su empresa, por favor lo invitamos a contestar las encuestas disponibles en la pestaña encuestas para definir una politica a su medida";
       textc.appendChild(texth);
-      localStorage.removeItem("lvl")
-      localStorage.removeItem("data")
+      localStorage.removeItem("lvl");
+      localStorage.removeItem("data");
     }
     if (desimg === 3) {
       const imgl = document.createElement("img");
@@ -47,8 +48,8 @@ export default class Resultado extends Component {
       texth.innerHTML =
         "encontramos que su empresa esta preparada para integrar politicas ambientales avanzadas y dar el paso final en la legalizacion de las mismas, lo invitamos a contestar las encuestas disponibles para evaluar las politicas que ya tiene establecidas";
       textc.appendChild(texth);
-      localStorage.removeItem("lvl")
-      localStorage.removeItem("data")
+      localStorage.removeItem("lvl");
+      localStorage.removeItem("data");
     }
     if (desimg === 0) {
       const imgl = document.createElement("img");
@@ -56,32 +57,35 @@ export default class Resultado extends Component {
       imgl.alt = "nivel2 contdiv";
       imgc.appendChild(imgl);
 
-
       const texth = document.createElement("h5");
       texth.innerHTML =
         "su nivel es muy bajo para ofrecerle productos a su medida, en su lugar le ofrecemos una capacitacion en la cual se le enseñaran los conceptos que encontramos escenciales para un correcto desarrollo sustentable, Kairos se contactara con usted en los siguientes dias para confirmar y coordinar las reuniones para capacitacion.";
-      textc.appendChild(texth);    
-        this.minlvl()
-
+      textc.appendChild(texth);
+      this.minlvl();
     }
   }
-minlvl(){
-  const uname = JSON.parse(localStorage.getItem("data")).Nombre
-  const ucorreo = JSON.parse(localStorage.getItem("data")).Correo
-  const mensaje = "el usuario "+uname+" de correo "+ucorreo+" ha calificado para el nivel mas bajo"
-  console.log("tiene el nivel minimo")
-  AuthService.sendmail(mensaje).then(
-    (response) => {
-      console.log(response.data) 
-      localStorage.removeItem("lvl")
-      localStorage.removeItem("data")
-    },
-      
+  minlvl() {
+    //funcion que envia el correo en caso de obtener el nivel mas bajo
+    const uname = JSON.parse(localStorage.getItem("data")).Nombre;
+    const ucorreo = JSON.parse(localStorage.getItem("data")).Correo;
+    const mensaje =
+      "el usuario " +
+      uname +
+      " de correo " +
+      ucorreo +
+      " ha calificado para el nivel mas bajo";
+    AuthService.sendmail(mensaje).then(
+      (response) => {
+        console.log(response.data);
+        localStorage.removeItem("lvl");
+        localStorage.removeItem("data");
+      },
+
       (err) => {
-        console.log(err.response.data)
+        console.log(err.response.data);
       }
-      );
-}
+    );
+  }
   render() {
     return (
       <Fragment>
@@ -89,7 +93,8 @@ minlvl(){
           <Form>
             <h1>Resultado</h1>
             <h5>
-              En base a las respuestas proporcionadas, su nivel es &nbsp;{JSON.parse(localStorage.getItem("lvl"))}
+              En base a las respuestas proporcionadas, su nivel es &nbsp;
+              {JSON.parse(localStorage.getItem("lvl"))}
             </h5>
             <br />
             <br />

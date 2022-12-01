@@ -12,7 +12,8 @@ import SelectNumT from "../Component/SelectNumT";
 import SelectMotivacion from "../Component/SelectMotivacion";
 import SelectTipoInduc from "../Component/SelectTipoInduc";
 import { Link } from "react-router-dom";
-
+/*pagina dos del registro de usuarios*/
+//declaracion de variables que se utilizaran en las funciones de la pagina
 var auxcompacc = "";
 var auxnumwork = "";
 var auxpfem = "";
@@ -25,6 +26,8 @@ var auxindextra = "";
 var auxcerfextra = "";
 class Formreg2 extends Component {
   authclik() {
+    //funcion encargada de verificar que los datos obligatorios esten rellenados para habilitar el boton de continuar
+
     if (
       auxcompacc &&
       auxnumwork &&
@@ -46,6 +49,8 @@ class Formreg2 extends Component {
       });
     }
   }
+  //funcion encargada de comprobar si se selecciono otra en el apartado certificados
+
   otrcetif(aselec) {
     if (aselec === "Otra") {
       this.setState({
@@ -58,6 +63,7 @@ class Formreg2 extends Component {
       });
     }
   }
+  //funcion encargada de comprobar si se selecciono otro en el apartado industria
   otrind(aselec) {
     if (aselec === "Otro") {
       this.setState({
@@ -71,20 +77,20 @@ class Formreg2 extends Component {
     }
   }
   compb() {
+    //funcion encargada de guardar los datos en localhost para usarlos en el registro agregandolos a los ya guardados de la pagina uno del registro
     let dts = JSON.parse(localStorage.getItem("data"));
-     
-      dts.compacc = auxcompacc;
-      dts.numwork = auxnumwork;
-      dts.pfem = auxpfem;
-      dts.itype = auxitype;
-      dts.indextra = auxindextra;
-      dts.accomr = auxaccomr;
-      dts.certf = auxcertf;
-      dts.cerfextra = auxcerfextra;
-      dts.motiv = auxmotiv;
-      dts.alcan = auxalcan;
+    dts.compacc = auxcompacc;
+    dts.numwork = auxnumwork;
+    dts.pfem = auxpfem;
+    dts.itype = auxitype;
+    dts.indextra = auxindextra;
+    dts.accomr = auxaccomr;
+    dts.certf = auxcertf;
+    dts.cerfextra = auxcerfextra;
+    dts.motiv = auxmotiv;
+    dts.alcan = auxalcan;
 
-   localStorage.setItem("data", JSON.stringify(dts));
+    localStorage.setItem("data", JSON.stringify(dts));
   }
   constructor(props) {
     super(props);
@@ -117,6 +123,7 @@ class Formreg2 extends Component {
       IsAllComplete: true,
     };
   }
+  //funciones que guardan los datos y obtienen los valores dinamicos al ingresar rellenar la encuasta
 
   onChangecompacc(e) {
     auxcompacc = e.target.value;
@@ -190,6 +197,8 @@ class Formreg2 extends Component {
     this.authclik();
   }
   handleButton(e) {
+    //funcion que confirma el ingreso de datos, guarda los datos y refresca la pagina al dar clic en continuar
+
     e.preventDefault();
     this.form.validateAll();
     this.compb();
@@ -206,7 +215,7 @@ class Formreg2 extends Component {
         <section id="Formulario">
           <Form
             onSubmit={this.handleLogin}
-            ref={c => {
+            ref={(c) => {
               this.form = c;
             }}
           >
@@ -428,9 +437,7 @@ class Formreg2 extends Component {
               >
                 Siguiente
               </button>
-
             </Link>
-            
           </Form>
         </section>
       </Fragment>

@@ -118,7 +118,7 @@ class AuthService {
   getCurrentUser() {
     return JSON.parse(localStorage.getItem("user"));
   }
-// funcion encargada de enviar el correo para el caso de menor nivel de dominio de sustentabilidad
+  // funcion encargada de enviar el correo para el caso de menor nivel de dominio de sustentabilidad
   sendmail(mensaje) {
     return axios.post(API_URL + "ems", {
       mensaje,

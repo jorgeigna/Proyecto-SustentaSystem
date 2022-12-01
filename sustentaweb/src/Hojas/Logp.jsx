@@ -4,9 +4,10 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../Services/auth.service.js";
-import { withRouter } from '../common/with-router';
-import logimg from "../images/login.png"
-const required = value => {
+import { withRouter } from "../common/with-router";
+import logimg from "../images/login.png";
+/*pagina de login de la aplicacion*/
+const required = (value) => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -26,28 +27,29 @@ class Logp extends Component {
       username: "",
       password: "",
       loading: false,
-      message: ""
+      message: "",
     };
   }
-  
+  //funciones encargadas de los cambios en los campos del login
+
   onChangeUsername(e) {
     this.setState({
-      username: e.target.value
+      username: e.target.value,
     });
   }
 
   onChangePassword(e) {
     this.setState({
-      password: e.target.value
+      password: e.target.value,
     });
   }
-
+  //funcion encargada de verificar el usuario y realizar el login del mismo
   handleLogin(e) {
     e.preventDefault();
 
     this.setState({
       message: "",
-      loading: true
+      loading: true,
     });
 
     this.form.validateAll();
@@ -58,7 +60,7 @@ class Logp extends Component {
           this.props.router.navigate("/");
           window.location.reload();
         },
-        error => {
+        (error) => {
           const resMessage =
             (error.response &&
               error.response.data &&
@@ -68,13 +70,13 @@ class Logp extends Component {
 
           this.setState({
             loading: false,
-            message: resMessage
+            message: resMessage,
           });
         }
       );
     } else {
       this.setState({
-        loading: false
+        loading: false,
       });
     }
   }
@@ -82,78 +84,79 @@ class Logp extends Component {
   render() {
     return (
       <Fragment>
-       
         <section id="logform">
-        <div className="col-md-12">
-
-
-          <Form
-            onSubmit={this.handleLogin}
-            ref={c => {
-              this.form = c;
-            }}
-          >
-                <img src={logimg} alt="logimg"
-              style={{width:"50%",marginLeft:"25%"}}/>
-            <div className="text-center"><h2>inicio de sesion</h2></div>
-            <div className="form-group">
-              <label htmlFor="username">Username</label>
-              <Input
-                type="text"
-                className="form-control"
-                name="username"
-                value={this.state.username}
-                onChange={this.onChangeUsername}
-                validations={[required]}
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <Input
-                type="password"
-                className="form-control"
-                name="password"
-                value={this.state.password}
-                onChange={this.onChangePassword}
-                validations={[required]}
-              />
-            </div>
-
-            <div className="form-group">
-                                       <div>
-                <p style={{ float: "left" }}>si no tienes cuenta &nbsp;</p>
-                <p>
-                  <a href="/registro/pag1"> registrate</a>
-                </p>
-              </div>
-               <button
-                className="btn btn-primary btn-block"
-                disabled={this.state.loading}
-              >
-                {this.state.loading && (
-                  <span className="spinner-border spinner-border-sm"></span>
-                )}
-                <span>Login</span>
-              </button>
-            </div>
-
-            {this.state.message && (
-              <div className="form-group">
-                <div className="alert alert-danger" role="alert">
-                  {this.state.message}
-                </div>
-              </div>
-            )}
-            <CheckButton
-              style={{ display: "none" }}
-              ref={c => {
-                this.checkBtn = c;
+          <div className="col-md-12">
+            <Form
+              onSubmit={this.handleLogin}
+              ref={(c) => {
+                this.form = c;
               }}
-            />
+            >
+              <img
+                src={logimg}
+                alt="logimg"
+                style={{ width: "50%", marginLeft: "25%" }}
+              />
+              <div className="text-center">
+                <h2>inicio de sesion</h2>
+              </div>
+              <div className="form-group">
+                <label htmlFor="username">Username</label>
+                <Input
+                  type="text"
+                  className="form-control"
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.onChangeUsername}
+                  validations={[required]}
+                />
+              </div>
 
-          </Form>
-        </div>
+              <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <Input
+                  type="password"
+                  className="form-control"
+                  name="password"
+                  value={this.state.password}
+                  onChange={this.onChangePassword}
+                  validations={[required]}
+                />
+              </div>
+
+              <div className="form-group">
+                <div>
+                  <p style={{ float: "left" }}>si no tienes cuenta &nbsp;</p>
+                  <p>
+                    <a href="/registro/pag1"> registrate</a>
+                  </p>
+                </div>
+                <button
+                  className="btn btn-primary btn-block"
+                  disabled={this.state.loading}
+                >
+                  {this.state.loading && (
+                    <span className="spinner-border spinner-border-sm"></span>
+                  )}
+                  <span>Login</span>
+                </button>
+              </div>
+
+              {this.state.message && (
+                <div className="form-group">
+                  <div className="alert alert-danger" role="alert">
+                    {this.state.message}
+                  </div>
+                </div>
+              )}
+              <CheckButton
+                style={{ display: "none" }}
+                ref={(c) => {
+                  this.checkBtn = c;
+                }}
+              />
+            </Form>
+          </div>
         </section>
       </Fragment>
     );

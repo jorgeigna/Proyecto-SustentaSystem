@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from "react";
 import AuthService from "../Services/auth.service";
 import { withRouter } from "../common/with-router";
-
 import Form from "react-bootstrap/Form";
+/*pagina de encuesta inicial */
+//declaracion de variables que se utilizaran en la pagina
 var resp1 = 0;
 var resp2 = 0;
 var resp3 = 0;
@@ -31,7 +32,6 @@ class Regencu extends Component {
     this.onChangerp10 = this.onChangerp10.bind(this);
     this.calcLV = this.calcLV.bind(this);
     this.calcPnt = this.calcPnt.bind(this);
-    this.print = this.print.bind(this);
     this.setdt = this.setdt.bind(this);
     this.buttonHandler = this.buttonHandler.bind(this);
     this.regusuario = this.regusuario.bind(this);
@@ -46,6 +46,7 @@ class Regencu extends Component {
   }
 
   calcPnt() {
+    //funcion encargada de calcular el puntaje ponderado en base a las respuestas ingresadas
     let rp1as = [0, 33, 66, 100];
     let rp2as = [0, 33, 66, 100];
     let rp3as = [0, 33, 66, 100];
@@ -69,6 +70,7 @@ class Regencu extends Component {
         rp10as[parseInt(resp10)] * 0.1
     );
   }
+  //funcion encargada de dar un nivel en base al puntaje obtenido
   calcLV() {
     if (punt >= 75) {
       Lvl = 3;
@@ -83,14 +85,9 @@ class Regencu extends Component {
       Lvl = 0;
     }
   }
-  print() {
-    let dat = JSON.parse(localStorage.getItem("data"));
-    console.log(dat);
-    console.log(typeof dat);
-    console.log(dat.Nombre);
-    console.log(dat.Contraseña);
-  }
+
   regusuario() {
+    //funcion que obtiene los datos ingresado, calcula el nivel del cliente y registra al mismo como un usuario
     this.calcPnt();
     this.calcLV();
     this.setdt();
@@ -121,6 +118,7 @@ class Regencu extends Component {
     );
   }
   regcararact() {
+    //funcion que registra las caracteristicas del usuario despues de registrar al usuario
     let dat = JSON.parse(localStorage.getItem("data"));
 
     this.setState({
@@ -174,6 +172,7 @@ class Regencu extends Component {
     );
   }
   regresp() {
+    //funcion encargada de registrar las respuestas de la encuesta estatica en la base de datos
     let dat = JSON.parse(localStorage.getItem("data"));
     this.setState({
       message: "",
@@ -213,10 +212,12 @@ class Regencu extends Component {
     );
   }
   buttonHandler(e) {
+    //funcion que ejecuta el registro al presionar el boton de continuar
     e.preventDefault();
     this.regusuario();
   }
   authclick() {
+    //funcion que valida que todas las respuetas esten contestadas para habilitar el boton de registro
     if (
       resp1 &&
       resp2 &&
@@ -240,6 +241,7 @@ class Regencu extends Component {
       });
     }
   }
+  //funciones encargadas de guardar los datos que se ingresan al cambiar alguna de las respuestas
   onChangerp1(e) {
     resp1 = e.target.value;
     this.authclick();
@@ -281,6 +283,7 @@ class Regencu extends Component {
     this.authclick();
   }
   setdt() {
+    //funcion que guarda el nivel para usarlo en la siguente pagina
     let dts = JSON.parse(localStorage.getItem("data"));
     dts.Level = Lvl;
     localStorage.setItem("data", JSON.stringify(dts));
@@ -337,13 +340,15 @@ class Regencu extends Component {
 
               <input type="radio" name="resp2" id={2} value={2} />
               <label htmlFor="rp3p2">
-                &nbsp;conozco que es la economia circular y planeo integrarla a mi empresa
+                &nbsp;conozco que es la economia circular y planeo integrarla a
+                mi empresa
               </label>
               <br></br>
 
               <input type="radio" name="resp2" id="rp4p2" value={3} />
               <label htmlFor="rp4p2">
-                &nbsp;conozco la economia circular y tengo metas establecidas a cumplir
+                &nbsp;conozco la economia circular y tengo metas establecidas a
+                cumplir
               </label>
               <br />
               <br />
@@ -372,7 +377,8 @@ class Regencu extends Component {
 
               <input type="radio" name="resp3" id="rp4p3" value={3} />
               <label htmlFor="rp4p3">
-                &nbsp;tengo metas propias y requerimientos de certificados que cumplir de aqui al 2030
+                &nbsp;tengo metas propias y requerimientos de certificados que
+                cumplir de aqui al 2030
               </label>
             </div>
             <br />
