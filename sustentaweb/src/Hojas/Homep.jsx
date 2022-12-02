@@ -10,15 +10,15 @@ class Homep extends Component {
     return (
       <Fragment>
         <div className="carrouselcont">
-          <Carousel variant="dark">
+          <Carousel variant="light">
             <Carousel.Item>
               <img
                 className="d-block w-100"
                 src={firstimage}
                 alt="testimage"
-                style={{ height: 400 }}
+                style={{ height: 400, filter:"brightness(60%)" }}
               />
-              <Carousel.Caption>
+              <Carousel.Caption className="caption58">
                 <h5 style={{ fontWeight: "1000" }}>Cumple tus metas</h5>
                 <p style={{ fontWeight: "bold" }}>
                   Nuestra experiencia te ayudara a cumplirlas
@@ -30,38 +30,37 @@ class Homep extends Component {
                 className="d-block w-100"
                 src={secondimage}
                 alt="Second slide"
-                style={{ height: 400 }}
+                style={{ height: 400, filter:"brightness(60%)" }}
               />
               <Carousel.Caption>
                 <h5 style={{ fontWeight: "1000" }}>Nuestros productos</h5>
                 <p style={{ fontWeight: "bolder" }}>
-                  estan pensados para tus necesidades.
+                Están pensados para tus necesidades
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100"
+                className="d-block54 w-100"
                 src={thirdunage}
                 alt="Third slide"
-                style={{ height: 400 }}
+                style={{ height: 400, filter:"brightness(50%)"}}
               />
               <Carousel.Caption>
                 <h5 style={{ fontWeight: "1000" }}>Kairos</h5>
                 <p style={{ fontWeight: "bolder" }}>
-                  es una empresa especializada en sustentabilidad lista para
-                  ayudar
+                Es una empresa especializada en sustentabilidad lista para ayudar 
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </div>
         <form className="imgcontainer">
-          <h1 className="tittleimg">experiencia de nuestros usuarios</h1>
+          <h1 className="tittleimg">Experiencia de nuestros usuarios</h1>
           <img src={companyimage} className="compimg" alt="companyimage" />
           <div>
             <h3>Empresa de ejemplo</h3>
-            <h6>
+            <h6 className="textusuarios">
               "Kairos es una de las mejores empresas de consultoria que hemos
               contratado, partimos de no tener nada a tener una politica
               ambiental para cumplir con las metas de 2023"
@@ -73,7 +72,7 @@ class Homep extends Component {
         <br />
         <br />
         <form className="ourcontainer">
-          <strong style={{ fontSize: "30pt" }}>nuestros clientes</strong>
+          <strong style={{ fontSize: "30pt", paddingLeft:"2%" }}>Nuestros Clientes</strong>
           <div className="row">
             <div className="column">
               <img className = "imgcl"
@@ -88,17 +87,16 @@ class Homep extends Component {
                 src="http://kairosgestionintegral.com/wp-content/uploads/2021/12/Imagen2.png"
                 alt=""
               />
-
               <img
                 className="imgcl"
                 src="http://kairosgestionintegral.com/wp-content/uploads/2022/01/qhantatisustentable-300x296.png"
                 alt=""
               />
-                            <img className = "imgcl"
+              <img className = "imgcl"
                 src="http://kairosgestionintegral.com/wp-content/uploads/2021/12/z-Destileria-Carupamp.png"
                 alt=""
               />
-                            <img className = "imgcl"
+              <img className = "imgcl"
                 src="http://kairosgestionintegral.com/wp-content/uploads/2021/12/Yarna-shop.png"
                 alt=""
               />

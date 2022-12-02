@@ -24,7 +24,7 @@ export default class Resultado extends Component {
       localStorage.removeItem("data");
 
       texth.innerHTML =
-        "encontramos que su nivel es suficiente para empezar la construccion de medidas para su empreas, por lo que lo invitamos a contestar las encuestas de nivel uno que se han habilitado para usted, a medida que se avance con las medidas avanzaremos en la creacion de politicas a su medida";
+        "Encontramos que su nivel es suficiente para empezar la construcción de medidas para su empresa, por lo que lo invitamos a contestar las encuestas de nivel uno que se han habilitado para usted, a medida que se avance con las medidas avanzaremos en la creación de políticas a su medida.";
       textc.appendChild(texth);
     }
     if (desimg === 2) {
@@ -34,7 +34,7 @@ export default class Resultado extends Component {
       imgc.appendChild(imgl);
       const texth = document.createElement("h5");
       texth.innerHTML =
-        "encontramos que su nivel es adecuado para definir los ODS y plantear la politica sustentable que llevara su empresa, por favor lo invitamos a contestar las encuestas disponibles en la pestaña encuestas para definir una politica a su medida";
+        "Encontramos que su nivel es adecuado para definir los ODS y plantear la política sustentable que llevara su empresa, por favor lo invitamos a contestar las encuestas disponibles en la pestaña encuestas para definir una política a su medida.";
       textc.appendChild(texth);
       localStorage.removeItem("lvl");
       localStorage.removeItem("data");
@@ -46,7 +46,7 @@ export default class Resultado extends Component {
       imgc.appendChild(imgl);
       const texth = document.createElement("h5");
       texth.innerHTML =
-        "encontramos que su empresa esta preparada para integrar politicas ambientales avanzadas y dar el paso final en la legalizacion de las mismas, lo invitamos a contestar las encuestas disponibles para evaluar las politicas que ya tiene establecidas";
+        "Encontramos que su empresa está preparada para integrar políticas ambientales avanzadas y dar el paso final en la legalización de las mismas, lo invitamos a contestar las encuestas disponibles para evaluar las políticas que ya tiene establecidas.";
       textc.appendChild(texth);
       localStorage.removeItem("lvl");
       localStorage.removeItem("data");
@@ -59,7 +59,7 @@ export default class Resultado extends Component {
 
       const texth = document.createElement("h5");
       texth.innerHTML =
-        "su nivel es muy bajo para ofrecerle productos a su medida, en su lugar le ofrecemos una capacitacion en la cual se le enseñaran los conceptos que encontramos escenciales para un correcto desarrollo sustentable, Kairos se contactara con usted en los siguientes dias para confirmar y coordinar las reuniones para capacitacion.";
+        "Su nivel es muy bajo para ofrecerle productos a su medida, en su lugar le ofrecemos una capacitación en la cual se le enseñaran los conceptos que encontramos esenciales para un correcto desarrollo sustentable, Kairos se contactara con usted en los siguientes días para confirmar y coordinar las reuniones para capacitación.";
       textc.appendChild(texth);
       this.minlvl();
     }

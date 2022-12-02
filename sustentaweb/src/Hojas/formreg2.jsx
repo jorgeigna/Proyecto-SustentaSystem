@@ -219,14 +219,11 @@ class Formreg2 extends Component {
               this.form = c;
             }}
           >
-            <h1>Formulario de registro</h1>
-            <h5>
-              Para conocer un poco más sobre la actual situación en relación a
-              la sustentabilidad del negocio que lideras, haremos una seríe de
-              preguntas diagnósticas que permitirá establecer un punto de
-              partida al desarrollo de modelo de negocio sustentable{" "}
+            <h1>Formulario de Registro</h1>
+            <h5 className="h5descripcion">
+              Para conocer un poco más sobre la actual situación en relación a la sustentabilidad del negocio que lideras, haremos una serie de preguntas diagnósticas que permitirá establecer un punto de partida al desarrollo de modelo de negocio sustentable.{" "}
             </h5>
-            <Row>
+            <Row className="row">
               <SeleccionCompAccion
                 onChange={this.onChangecompacc}
                 className="SeleccionarAcc"
@@ -364,7 +361,7 @@ class Formreg2 extends Component {
               <SelectCertif
                 onChange={this.onChangecertf}
                 className="SeleccionarCertificaciones"
-                TituloInputNormal="Seleccione Si Posee Alguna de estas Certificaciones SocioAmbientales"
+                TituloInputNormal="Seleccione Si Posee Alguna de estas Certificaciones Socioambientales"
                 TituloInputSeleccion="Seleccione si posee o no posee "
                 opcion1="Acuerdo de Producción Limpia"
                 opcion2="Alimento Vegano"
@@ -418,7 +415,7 @@ class Formreg2 extends Component {
               <SelectAlcances
                 onChange={this.onChangealcan}
                 className="SeleccionarAlcances"
-                TituloInputNormal="Elija los Alcances de la Medición de Impactoque Espera Obtener para el Negocio"
+                TituloInputNormal="Elija los Alcances de la Medición de Impacto que Espera Obtener para el Negocio "
                 TituloInputSeleccion="Seleccione los Alcances"
                 opcion1="Modelo de Negocio"
                 opcion2="Economía Circular"

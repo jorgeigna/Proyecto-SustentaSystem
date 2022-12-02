@@ -99,7 +99,7 @@ export default class About extends Component {
                   to="/registro/pag1"
                   className="btn btn-light px-5 rounded-pill shadow-sm"
                 >
-                  registrate
+                  Registrate
                 </Link>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default class About extends Component {
           <div className="container py-5">
             <div className="row mb-4">
               <div className="col-lg-5">
-                <h2 className="display-4 font-weight-light">NUESTRO EQUIPO</h2>
+                <h2 className="display-5 font-weight-light" >NUESTRO EQUIPO</h2>
               </div>
             </div>
 

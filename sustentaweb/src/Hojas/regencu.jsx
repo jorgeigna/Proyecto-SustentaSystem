@@ -295,7 +295,7 @@ class Regencu extends Component {
         <section id="Emcuesta">
           <Form>
             <h1>Encuesta de Conocimiento y Nivelación</h1>
-            <h5>
+            <h5 className="h5descripcion">
               Para conocer que producto necesita solicitamos completar esta
               encuesta, solicitamos completar con sinceridad para determinar
               correctamente que nivel de conocimiento posee sobre la
@@ -324,30 +324,30 @@ class Regencu extends Component {
             </div>
             <div onChange={this.onChangerp2}>
               <p style={{ fontWeight: "bolder" }}>
-                ¿Conoce que es la economia circular?
+                ¿Conoce que es la economía circular?
               </p>
               <input type="radio" name="resp2" id="rp1p2" value={0} />
               <label htmlFor="rp1p2">
-                &nbsp;No conozco nada de economia circular
+                &nbsp;No conozco nada de economía circular
               </label>
               <br></br>
 
               <input type="radio" name="resp2" id="rp2p2" value={1} />
               <label htmlFor="rp2p2">
-                &nbsp;He escuchado sobre economia circular pero no lo domino
+                &nbsp;He escuchado sobre economía circular pero no lo domino
               </label>
               <br></br>
 
               <input type="radio" name="resp2" id={2} value={2} />
               <label htmlFor="rp3p2">
-                &nbsp;Conozco que es la economia circular y planeo integrarla a
+                &nbsp;Conozco que es la economía circular y planeo integrarla a
                 mi empresa
               </label>
               <br></br>
 
               <input type="radio" name="resp2" id="rp4p2" value={3} />
               <label htmlFor="rp4p2">
-                &nbsp;conozco la economia circular y tengo metas establecidas a
+                &nbsp;conozco la economía circular y tengo metas establecidas a
                 cumplir
               </label>
               <br />
@@ -355,30 +355,29 @@ class Regencu extends Component {
             </div>
             <div onChange={this.onChangerp3}>
               <p style={{ fontWeight: "bolder" }}>
-                ¿posee planes ambientales de aqui al 2030?
+                ¿Posee planes ambientales de aquí al 2030?
               </p>
               <input type="radio" name="resp3" id="rp1p3" value={0} />
               <label htmlFor="rp1p3">
-                &nbsp;no tengo planes ambientales de aqui al 2030
+                &nbsp;No tengo planes ambientales de aquí al 2030
               </label>
               <br></br>
 
               <input type="radio" name="resp3" id="rp2p3" value={1} />
               <label htmlFor="rp2p3">
-                &nbsp;estoy planteando metas ambientales de aqui al 2030
+                &nbsp;Estoy planteando metas ambientales de aquí al 2030
               </label>
               <br></br>
 
               <input type="radio" name="resp3" id="rp3p3" value={2} />
               <label htmlFor="rp3p3">
-                &nbsp;tengo metas propias establecidas de aqui al 2030
+                &nbsp;Tengo metas propias establecidas de aquí al 2030
               </label>
               <br></br>
 
               <input type="radio" name="resp3" id="rp4p3" value={3} />
               <label htmlFor="rp4p3">
-                &nbsp;tengo metas propias y requerimientos de certificados que
-                cumplir de aqui al 2030
+                &nbsp;Tengo metas propias y requerimientos de certificados que cumplir de aquí al 2030
               </label>
             </div>
             <br />

@@ -481,11 +481,9 @@ class FormReg1 extends Component {
                 this.form = c;
               }}
             >
-              <h1>Formulario de registro</h1>
+              <h1>Formulario de Registro</h1>
               <h5>
-                para registrar su cuenta se necesitaremos algunos datos, para
-                ello lo invitamos a rellenar este formulario y contestar una
-                pequeña encueta
+                Para registrar su cuenta se necesitaremos algunos datos, para ello lo invitamos a rellenar este formulario y contestar una pequeña encueta
               </h5>
               <div>
                 <Row className="Fila1">
@@ -507,7 +505,7 @@ class FormReg1 extends Component {
                     <label htmlFor="nombre">Nombre</label>
                     <Input
                       name="nombre"
-                      placeholder="ingrese su nombre"
+                      placeholder="Ingrese su nombre"
                       className="form-control"
                       value={this.state.Nombre}
                       onChange={this.onChangeNombre}
@@ -516,11 +514,11 @@ class FormReg1 extends Component {
                   </div>
                 </Row>
                 <Row className="fila3">
-                  <label htmlFor="apellido">apellido</label>
+                  <label htmlFor="apellido">Apellido</label>
 
                   <Input
                     name="apellido"
-                    placeholder="ingrese su apelldo"
+                    placeholder="Ingrese su apelldo"
                     value={this.state.Apellido}
                     onChange={this.onChangeApellido}
                     validations={[required, notnumber]}
@@ -535,7 +533,7 @@ class FormReg1 extends Component {
                     type="password"
                     className="form-control"
                     name="password"
-                    placeholder="ingrese una contraseña"
+                    placeholder="Ingrese una contraseña"
                     value={this.state.Contraseña}
                     onChange={this.onChangeContraseña}
                     validations={[required, vpassword]}
@@ -545,11 +543,11 @@ class FormReg1 extends Component {
                 <Row className="Fila5">
                   <FormGroup as={Col}>
                     <label htmlFor="NombreOrganizacion">
-                      Nombre de la organizacion
+                      Nombre de la organización 
                     </label>
                     <Input
                       type="NombreOrganizacion"
-                      placeholder="ingrese el nombre de su organizacion"
+                      placeholder="Ingrese el nombre de su organización"
                       className="form-control"
                       name="NombreOrganizacion"
                       value={this.NombreOrganizacion}
@@ -558,7 +556,7 @@ class FormReg1 extends Component {
                     />
                   </FormGroup>
                   <FormGroup as={Col}>
-                    <label htmlFor="area">area de la organizacion</label>
+                    <label htmlFor="area">Área de la organización</label>
                     <select
                       name="area"
                       id="area"
@@ -594,9 +592,10 @@ class FormReg1 extends Component {
                 </Row>
                 <Row className="Fila6">
                   <FormGroup as={Col}>
-                    <FormLabel>telefono</FormLabel>
+                    <FormLabel>Teléfono</FormLabel>
                     <InputGroup className="mb-4">
                       <FormControl
+                        style={{maxWidth:"20%"}}
                         disabled
                         value={this.state.cdarea}
                       ></FormControl>
@@ -605,7 +604,7 @@ class FormReg1 extends Component {
                         onChange={this.onChangeTelefono}
                         type="text"
                         validations={[required, isnumber, estelefono]}
-                        placeholder="ingrese su telefono"
+                        placeholder="Ingrese su teléfono"
                       />
                     </InputGroup>
                   </FormGroup>
@@ -632,7 +631,7 @@ class FormReg1 extends Component {
                     <Input
                       className="form-control"
                       name="NFiscal"
-                      placeholder="ingrese el identificador fiscal de su organizacion"
+                      placeholder="Ingrese el identificador fiscal de su organización"
                       value={this.NFiscal}
                       onChange={this.onChangeNFiscal}
                       validations={[required, isnumber]}
@@ -641,7 +640,7 @@ class FormReg1 extends Component {
                 </Row>
                 <Row className="Fila8">
                   <FormGroup as={Col}>
-                    <label htmlFor="paises">Seleccioe el pais</label>
+                    <label htmlFor="paises">Seleccione el país</label>
                     <select
                       name="paises"
                       id="pslect"
@@ -650,7 +649,7 @@ class FormReg1 extends Component {
                         this.onChangePais(e);
                       }}
                     >
-                      <option value="">Seleccione su pais</option>
+                      <option value="">Seleccione su país</option>
                       {this.state.countries.map((elemento) => (
                         <option key={elemento.name} value={elemento.name}>
                           {elemento.name}
@@ -659,7 +658,7 @@ class FormReg1 extends Component {
                     </select>
                   </FormGroup>
                   <FormGroup as={Col}>
-                    <label htmlFor="regiones">Region</label>
+                    <label htmlFor="regiones">Región</label>
                     <select
                       name="regiones"
                       id="stselec"
@@ -692,7 +691,7 @@ class FormReg1 extends Component {
                   Monto de Facturación del Último Año Fiscal
                 </label>
                 <Input
-                  placeholder="ingrese el monto de facturacion del ultimo año fiscal"
+                  placeholder="Ingrese el monto de facturación del último año fiscal"
                   className="form-control"
                   name="MontoFact"
                   value={this.MontoFact}
@@ -703,14 +702,14 @@ class FormReg1 extends Component {
                 <Input
                   className="form-control"
                   name="PagWeb"
-                  placeholder="ingrese el sitio web de su organizacion si es que posee"
+                  placeholder="Ingrese el sitio web de su organización si es que posee"
                   value={this.PagWeb}
                   onChange={this.onChangePagWeb}
                 />
 
                 <label htmlFor="Redes">Redes Sociales de la Organización</label>
                 <Input
-                  placeholder=" ingrese los nombres de las redes sociales que utiliza"
+                  placeholder="Ingrese los nombres de las redes sociales que utiliza"
                   className="form-control"
                   name="Redes"
                   value={this.Redes}
@@ -725,7 +724,7 @@ class FormReg1 extends Component {
                   this.checkBtn = c;
                 }}
               >
-                siguiente
+                Siguiente
               </CheckButton>
             </Form>
           </section>

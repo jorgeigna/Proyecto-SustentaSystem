@@ -98,7 +98,7 @@ class Logp extends Component {
                 style={{ width: "50%", marginLeft: "25%" }}
               />
               <div className="text-center">
-                <h2>inicio de sesion</h2>
+                <h2>Inicio de sesion</h2>
               </div>
               <div className="form-group">
                 <label htmlFor="username">Username</label>
