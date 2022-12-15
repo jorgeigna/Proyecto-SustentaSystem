@@ -9,7 +9,7 @@ export default class Faq extends Component {
       <Fragment>
         <div className="containerfaq">
           <div className="cardtittle">
-            <h1 className="TitleFAQ">FAQ</h1>
+            <h1 className="TitleFAQ">Preguntas Frecuentes</h1>
             <h5>
             En este apartado se contestan algunas de las dudas más comunes de nuestros clientes
             </h5>
@@ -29,7 +29,7 @@ export default class Faq extends Component {
             </Accordion.Item>
             <Accordion.Item eventKey="2" className="achead">
               <Accordion.Header>
-                ¿Porque son importante las certificaciones ambientales?
+                ¿Por qué son importante las certificaciones ambientales?
               </Accordion.Header>
               <Accordion.Body>
                 Aquellas empresas que logran alguna certificación socioambiental se vuelven más competitivas y desarrollan prácticas de mejora continua como una cultura permanente, así como, un a largo plazo por el planeta y la personas.

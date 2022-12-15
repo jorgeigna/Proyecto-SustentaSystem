@@ -110,22 +110,25 @@ export default class About extends Component {
           <div className="container py-5">
             <div className="row mb-4">
               <div className="col-lg-5">
-                <h2 className="display-5 font-weight-light" >NUESTRO EQUIPO</h2>
+                <h2 className="display-5 font-weight-light" >EQUIPO</h2>
               </div>
             </div>
 
-            <div className="row text-center">
+            <div className="row ">
               <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
+                <div className="bg-white rounded shadow-sm py-5 px-4 ">
+                  <div className="text-center">
                   <img
                     src={im1}
                     alt=""
                     width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm "
                   />
-                  <h5 className="mb-0">Lic. Danelli Jiménez</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
+                  </div>
+                  
+                  <h5 className="mb-0">Danelli Jiménez</h5>
+                  <span className="small text-muted">
+                    Ama el café y el deporte, especialista en sustentabilidad y triple impacto
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
@@ -150,19 +153,64 @@ export default class About extends Component {
                     </li>
                   </ul>
                 </div>
+
+                
+              </div>
+
+
+              <div className="col-xl-3 col-sm-6 mb-5">
+                <div className="bg-white rounded shadow-sm py-5 px-4">
+                <div className="text-center">
+                  <img
+                      src={im4}
+                      alt=""
+                      width="100"
+                      className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                    />
+                </div>
+                  
+                  <h5 className="mb-0">Yumey Acevedo</h5>
+                  <span className="small text-muted">
+                    Canta y cocina estupendo, especialista en virtualización de contenido, una maga del elearning
+                  </span>
+                  <ul className="social mb-0 list-inline mt-3 ">
+                    <li className="list-inline-item">
+                      <a href="/#" className="social-link">
+                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
+                      </a>
+                    </li>
+                    <li className="list-inline-item">
+                      <a href="/#" className="social-link">
+                        <FontAwesomeIcon icon={["fab", "twitter"]} />
+                      </a>
+                    </li>
+                    <li className="list-inline-item">
+                      <a href="/#" className="social-link">
+                        <FontAwesomeIcon icon={["fab", "instagram"]} />
+                      </a>
+                    </li>
+                    <li className="list-inline-item">
+                      <a href="/#" className="social-link">
+                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               <div className="col-xl-3 col-sm-6 mb-5">
                 <div className="bg-white rounded shadow-sm py-5 px-4">
+                  <div className="text-center">
                   <img
-                    src={im2}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Lic. Nilda Bigott</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
+                      src={im5}
+                      alt=""
+                      width="100"
+                      className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                    />
+                  </div>
+                  <h5 className="mb-0">Daniel Jiménez</h5>
+                  <span className="small  text-muted">
+                    Aficionado al deporte al aire libre, especialista en el área comercial y proyectos sustentables
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
@@ -191,90 +239,18 @@ export default class About extends Component {
 
               <div className="col-xl-3 col-sm-6 mb-5">
                 <div className="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src={im3}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Lic. Beatriz Mujica</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
-                  </span>
-                  <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "instagram"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src={im4}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Lic.Yumey Acevedo</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
-                  </span>
-                  <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "instagram"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="row text-center">
-              <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
+                  <div className="text-center">
                   <img
                     src={im5}
                     alt=""
                     width="100"
+                    style={{filter:"brightness(10000%)"}}
                     className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                   />
-                  <h5 className="mb-0">Lic. Daniel Jiménez</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
+                  </div>
+                  <h5 className="mb-0">Catherinne Herrera</h5>
+                  <span className="small text-muted">
+                    Vive la vida de manera olísta e integral, especialista en economía circular y desarrollo sustentable
                   </span>
                   <ul className="social mb-0 list-inline mt-3">
                     <li className="list-inline-item">
@@ -301,342 +277,10 @@ export default class About extends Component {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src={im6}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Yesmin Sánchez</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
-                  </span>
-                  <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "instagram"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src={im7}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Lic. Giovanna Ojeda</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
-                  </span>
-                  <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "instagram"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src={im8}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Lic. Jeaneth Cabrera</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
-                  </span>
-                  <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "instagram"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </div>
-            <div className="row text-center">
-              <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src={im9}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Lic. Brenda Parodi</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
-                  </span>
-                  <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "instagram"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
 
-              <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src={im10}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Lic. Silvia Rodríguez</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
-                  </span>
-                  <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "instagram"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src={im11}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Lic. Ana Cabrera</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
-                  </span>
-                  <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "instagram"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src={im12}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Dra. Gabriela Marcano</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
-                  </span>
-                  <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "instagram"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="row text-center">
-              <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src={im13}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Lic. Ana Azocar</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
-                  </span>
-                  <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "instagram"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="col-xl-3 col-sm-6 mb-5">
-                <div className="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src={im14}
-                    alt=""
-                    width="100"
-                    className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                  />
-                  <h5 className="mb-0">Lic. Ydorilis Gonzalez</h5>
-                  <span className="small text-uppercase text-muted">
-                    CEO - Founder
-                  </span>
-                  <ul className="social mb-0 list-inline mt-3">
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />{" "}
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "instagram"]} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a href="/#" className="social-link">
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
           </div>
+
         </div>
       </Fragment>
     );

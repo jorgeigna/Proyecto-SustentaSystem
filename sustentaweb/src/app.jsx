@@ -70,13 +70,13 @@ export default class App extends Component {
               <Container>
                 <Navbar.Brand>
                   <Link className="nav-link" to="/">
-                    SustentaWeb
+                    Sustenta System
                   </Link>
                 </Navbar.Brand>
                 <Nav className="me-auto">
                   <Nav.Link>
                     <Link className="nav-link" to="/">
-                      Home
+                      Inicio
                     </Link>
                   </Nav.Link>
                   {currentUser ? (
@@ -90,12 +90,12 @@ export default class App extends Component {
                   )}
                   <Nav.Link>
                     <Link className="nav-link" to="/about">
-                      Sobre Nosotros
+                      Conocenos
                     </Link>
                   </Nav.Link>
                   <Nav.Link>
                     <Link className="nav-link" to="/faq">
-                      FAQ
+                      Preguntas Frecuentes
                     </Link>
                   </Nav.Link>
                 </Nav>
@@ -107,7 +107,7 @@ export default class App extends Component {
                     </Nav.Link>
                     <Nav.Link eventKey={2}>
                       <Link to="/" onClick={this.logOut} className="nav-link">
-                        LogOut
+                        Cerrar Sesion
                       </Link>
                     </Nav.Link>
                   </Nav>
@@ -115,7 +115,7 @@ export default class App extends Component {
                   <Nav>
                     <Nav.Link eventKey={2}>
                       <Link to={"/login"} className="nav-link">
-                        Login
+                        Iniciar Sesion
                       </Link>
                     </Nav.Link>
                   </Nav>
@@ -139,7 +139,8 @@ export default class App extends Component {
               <section className="mb-4">
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="https://www.facebook.com/kairosgestionintegral/"
+                  //Colocar link de la red social correspondiente
+                  href=" "
                   target={"_blank"}
                   rel="noreferrer"
                   role="button"
@@ -150,7 +151,8 @@ export default class App extends Component {
 
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="https://api.whatsapp.com/send?phone=+56937448131&text=Requiero%20m%C3%A1s%20Informaci%C3%B3n%20de%20KairosCoach"
+                  //Colocar link de la red social correspondiente
+                  href=" "
                   target={"_blank"}
                   rel="noreferrer"
                   role="button"
@@ -160,7 +162,8 @@ export default class App extends Component {
 
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="mailto:%20contacto@kairosgestionintegral.com"
+                  //Colocar link de la red social correspondiente
+                  href=" "
                   target={"_blank"}
                   rel="noreferrer"
                   role="button"
@@ -170,7 +173,8 @@ export default class App extends Component {
 
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="https://www.instagram.com/kairosgestionintegral/"
+                  //Colocar link de la red social correspondiente
+                  href=" "
                   target={"_blank"}
                   rel="noreferrer"
                   role="button"
@@ -180,7 +184,8 @@ export default class App extends Component {
 
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="https://www.linkedin.com/company/kairosgestionintegral/"
+                  //Colocar link de la red social correspondiente
+                  href=" "
                   target={"_blank"}
                   rel="noreferrer"
                   role="button"
@@ -189,7 +194,8 @@ export default class App extends Component {
                 </a>
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="https://www.youtube.com/channel/UCHII_5amYANh0oyETZLgv7g"
+                  //Colocar link de la red social correspondiente
+                  href=" "
                   target={"_blank"}
                   rel="noreferrer"
                   role="button"
@@ -203,14 +209,15 @@ export default class App extends Component {
               className="text-center p-3"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
             >
-              Kairos coash © 2021:
+              Sustenta System © 2021:
               <a
                 className="text-white"
-                href="http://kairosgestionintegral.com/"
+                // Ingresar pagina web aqui
+                href=" "
                 rel="noreferrer"
                 target={"_blank"}
               >
-                kairosgestionintegral.com
+                SustentaSystem.com
               </a>
             </div>
           </footer>
