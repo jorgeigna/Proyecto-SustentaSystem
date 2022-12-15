@@ -285,7 +285,7 @@ class Regencu extends Component {
   setdt() {
     //funcion que guarda el nivel para usarlo en la siguente pagina
     let dts = JSON.parse(localStorage.getItem("data"));
-    dts.Level = Lvl;
+    dts.Lvl = Lvl;
     localStorage.setItem("data", JSON.stringify(dts));
   }
 

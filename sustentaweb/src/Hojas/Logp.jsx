@@ -101,7 +101,7 @@ class Logp extends Component {
                 <h2>Inicio de sesion</h2>
               </div>
               <div className="form-group">
-                <label htmlFor="username">Username</label>
+                <label htmlFor="username">Correo</label>
                 <Input
                   type="text"
                   className="form-control"
@@ -113,7 +113,7 @@ class Logp extends Component {
               </div>
 
               <div className="form-group">
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">Contraseña</label>
                 <Input
                   type="password"
                   className="form-control"
@@ -138,7 +138,7 @@ class Logp extends Component {
                   {this.state.loading && (
                     <span className="spinner-border spinner-border-sm"></span>
                   )}
-                  <span>Login</span>
+                  <span>Iniciar Sesion</span>
                 </button>
               </div>
 
